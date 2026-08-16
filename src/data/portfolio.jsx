@@ -14,7 +14,7 @@ export const portfolioData = {
     photo: "/assets/My_photo4.png", // Used the new photo the user pushed
     bio: (
       <>
-        I'm a final-year B.Tech Computer Science and Engineering student at <span className="text-white font-bold">Amity University</span> with a strong foundation in <span className="text-primary">Software Development, Artificial Intelligence and Full-Stack Development</span>
+        I'm B.Tech Computer Science and Engineering Graduate from <span className="text-white font-bold">Amity University</span> with a strong foundation in <span className="text-primary">Software Development, Artificial Intelligence and Full-Stack Development</span>
       </>
     ),
     interests: "Artificial Intelligence, Transformers, Generative AI, Full-Stack Development, and Cloud Computing.",
