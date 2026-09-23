@@ -15,18 +15,15 @@ function Navbar() {
           <a href="#" className="text-lg md:text-xl font-black tracking-tighter uppercase italic">
             <span className="text-primary">YUVRAJ SINGH</span>
           </a>
-          <p className="hidden lg:block text-xs italic"> Currently debugging My Life & code</p>
-          <div className="hidden lg:flex space-x-8 text-[9px] font-bold uppercase tracking-[0.3em]">
+          <p className="hidden lg:block text-xs italic"> Full-Stack & AI Developer</p>
+          <div className="hidden lg:flex space-x-6 text-[9px] font-bold uppercase tracking-[0.3em]">
             <a href="#about" className="hover:text-primary transition-all">About</a>
             <a href="#skills" className="hover:text-primary transition-all">Skills</a>
-            <a href="#experience" className="hover:text-primary transition-all">Experience</a>
             <a href="#projects" className="hover:text-primary transition-all">Projects</a>
+            <a href="#career-path" className="hover:text-primary transition-all">Career Path</a>
             <a href="#contact" className="hover:text-primary transition-all">Contact</a>
           </div>
           <div className="flex items-center space-x-4">
-            <a href={socials.find(s => s.text === 'Instagram')?.link} target="_blank" rel="noreferrer" className="hidden sm:block hover:text-primary transition-all">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
             <a href={socials.find(s => s.text === 'GitHub')?.link} target="_blank" rel="noreferrer" className="hidden sm:block hover:text-primary transition-all">
               <i className="fa-brands fa-github"></i>
             </a>
@@ -47,17 +44,16 @@ function Navbar() {
         <button onClick={closeMenu} className="absolute top-8 right-8 text-primary text-3xl">
           <i className="fa-solid fa-xmark"></i>
         </button>
-        <div className="flex flex-col space-y-8 text-2xl font-black uppercase italic tracking-widest">
+        <div className="flex flex-col space-y-6 text-2xl font-black uppercase italic tracking-widest">
           <a href="#about" onClick={closeMenu} className="hover:text-primary">About</a>
           <a href="#skills" onClick={closeMenu} className="hover:text-primary">Skills</a>
-          <a href="#experience" onClick={closeMenu} className="hover:text-primary">Experience</a>
           <a href="#projects" onClick={closeMenu} className="hover:text-primary">Projects</a>
+          <a href="#career-path" onClick={closeMenu} className="hover:text-primary">Career Path</a>
           <a href="#contact" onClick={closeMenu} className="hover:text-primary">Contact</a>
         </div>
-        <div className="mt-16 flex space-x-8 text-2xl">
+        <div className="mt-12 flex space-x-8 text-2xl">
           <a href={socials.find(s => s.text === 'GitHub')?.link} target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a>
           <a href={socials.find(s => s.text === 'LinkedIn')?.link} target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin"></i></a>
-          <a href={socials.find(s => s.text === 'Instagram')?.link} target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </>
