@@ -15,7 +15,7 @@ function Navbar() {
           <a href="#" className="text-lg md:text-xl font-black tracking-tighter uppercase italic">
             <span className="text-primary">YUVRAJ SINGH</span>
           </a>
-          <p className="hidden lg:block text-xs italic"> Full-Stack & AI Developer</p>
+          <p className="hidden lg:block text-xs italic"> Full-Stack Web Developer</p>
           <div className="hidden lg:flex space-x-6 text-[9px] font-bold uppercase tracking-[0.3em]">
             <a href="#about" className="hover:text-primary transition-all">About</a>
             <a href="#skills" className="hover:text-primary transition-all">Skills</a>

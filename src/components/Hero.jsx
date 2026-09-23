@@ -4,10 +4,10 @@ import { portfolioData } from '../data/portfolio';
 import ResumeModal from './ResumeModal';
 
 const ROLES = [
-  "Full-Stack & AI Developer",
+  "Full-Stack Web Developer",
   "Software Developer Intern @ MarketinGlu",
-  "MERN Stack Specialist",
-  "RAG Systems & Backend Architect"
+  "MERN Stack Specialist (React & Node.js)",
+  "RESTful API & Backend Architect"
 ];
 
 function Hero() {

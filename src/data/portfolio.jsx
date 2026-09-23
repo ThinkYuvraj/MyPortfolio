@@ -2,10 +2,10 @@ export const portfolioData = {
   hero: {
     title: "Yuvraj",
     subtitle: "Singh",
-    role: "Full-Stack & AI Developer",
+    role: "Full-Stack Web Developer",
     description: (
       <>
-        Engineering scalable full-stack web applications and <span className="text-white font-bold">AI-driven solutions</span>. Passionate about <span className="text-primary italic font-semibold">RESTful APIs, RAG Assistants & Cloud Architecture</span>.
+        Engineering scalable full-stack web applications with <span className="text-white font-bold">JavaScript, React.js, Node.js & Express.js</span>. Passionate about <span className="text-primary italic font-semibold">RESTful APIs, Microservices & Cloud Architecture</span>.
       </>
     ),
     resumeLink: "https://drive.google.com/file/d/1hnhPQcRrmByIUIFwmfG5ml0wjVOyXSrJ/view?usp=drive_link"
@@ -14,32 +14,32 @@ export const portfolioData = {
     photo: "/assets/My_photo4.png",
     bio: (
       <>
-        I'm a B.Tech Computer Science and Engineering student at <span className="text-white font-bold">Amity University, Noida</span> (2022–2026). I specialize in <span className="text-primary font-semibold">Full-Stack Web Development, AI/ML Integrations, and Backend Engineering</span>, with hands-on experience building scalable applications, AI recruitment platforms, real-time engines, and published IEEE research.
+        I'm a B.Tech Computer Science and Engineering student at <span className="text-white font-bold">Amity University, Noida</span> (2022–2026). I specialize in <span className="text-primary font-semibold">Full-Stack Web Development using JavaScript, React.js, Node.js, and Express.js</span>, with hands-on industry experience building real-time collaboration tools, e-commerce platforms, and published IEEE research.
       </>
     ),
-    interests: "Generative AI, RAG Architectures, Full-Stack Development, Microservices, and Cloud Computing.",
-    careerGoals: "To engineer robust backend architectures and AI-powered products that solve real-world problems at scale."
+    interests: "Full-Stack Web Development, MERN Stack (JavaScript, React.js, Node.js, Express.js), RESTful APIs, Microservices, and Cloud Computing.",
+    careerGoals: "To engineer robust backend architectures and high-performance full-stack web products that solve real-world problems at scale."
   },
   skills: [
     {
-      title: "Programming Languages",
-      items: ["Python", "JavaScript", "TypeScript"]
+      title: "Core Technologies",
+      items: ["JavaScript (ES6+)", "React.js", "Node.js", "Express.js", "TypeScript"]
     },
     {
       title: "Backend & APIs",
-      items: ["FastAPI", "Node.js", "Express.js", "RESTful API design", "JWT Authentication", "Socket.io"]
-    },
-    {
-      title: "Databases",
-      items: ["SQL", "PostgreSQL", "MongoDB"]
-    },
-    {
-      title: "Cloud & DevOps",
-      items: ["AWS (EC2, Lambda, S3, RDS, VPC, IAM, Auto Scaling)", "Docker", "GitHub Actions"]
+      items: ["Node.js", "Express.js", "RESTful API design", "JWT Authentication", "Socket.io", "FastAPI"]
     },
     {
       title: "Frontend",
-      items: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"]
+      items: ["JavaScript", "React.js", "HTML5", "CSS3", "Tailwind CSS", "Next.js"]
+    },
+    {
+      title: "Databases",
+      items: ["MongoDB", "SQL", "PostgreSQL"]
+    },
+    {
+      title: "Cloud & DevOps",
+      items: ["AWS (EC2, Lambda, S3, RDS, VPC, IAM)", "Docker", "GitHub Actions"]
     },
     {
       title: "Developer Tools & Collaboration",

@@ -6,9 +6,9 @@ function About() {
   const { about } = portfolioData;
 
   const pillars = [
-    { icon: "fa-solid fa-layer-group", title: "Full-Stack Web Dev", desc: "MERN Stack, Next.js & React 18" },
-    { icon: "fa-solid fa-brain", title: "AI & RAG Solutions", desc: "FastAPI, Embeddings & Sentence Transformers" },
-    { icon: "fa-solid fa-network-wired", title: "Backend Architecture", desc: "Node.js, Express, Socket.io & REST APIs" }
+    { icon: "fa-solid fa-layer-group", title: "Frontend Engineering", desc: "JavaScript (ES6+), React.js & Next.js" },
+    { icon: "fa-solid fa-server", title: "Backend Systems", desc: "Node.js, Express.js & RESTful APIs" },
+    { icon: "fa-solid fa-database", title: "Database & Cloud", desc: "MongoDB, SQL, PostgreSQL & AWS" }
   ];
 
   return (
@@ -29,12 +29,13 @@ function About() {
 
               {/* Floating Badge Overlay */}
               <div className="absolute -bottom-6 -right-2 md:-bottom-6 md:-right-6 glass p-5 md:p-6 rounded-[1.8rem] border border-primary/40 shadow-2xl backdrop-blur-xl">
-                <p className="text-xl md:text-3xl font-black text-white italic tracking-tighter">Full-Stack <span className="text-primary font-normal">&</span> AI</p>
+                <p className="text-xl md:text-3xl font-black text-white italic tracking-tighter">Full-Stack <span className="text-primary font-normal">Web</span></p>
                 <p className="text-xs text-gray-300 font-semibold mt-0.5">Software Developer</p>
                 <div className="mt-2 flex gap-1.5 flex-wrap">
-                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Python</span>
+                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">JS</span>
                   <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">React</span>
                   <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Node.js</span>
+                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Express</span>
                 </div>
               </div>
             </div>
