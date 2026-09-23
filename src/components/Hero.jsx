@@ -35,11 +35,6 @@ function Hero() {
         {/* Background Decorative Glow */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-[32rem] h-72 md:h-[32rem] bg-primary/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
 
-        <div className="mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-md">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span>Full-Stack & AI Developer</span>
-        </div>
-
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] font-black uppercase leading-none tracking-tighter text-white italic">
           {hero.title}
           <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase block sm:inline ml-2">
