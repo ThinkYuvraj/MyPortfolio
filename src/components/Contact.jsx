@@ -17,14 +17,20 @@ function Contact() {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
-    // Trigger mailto with user's message
+    // Trigger mailto with user's message safely without window.open
     const mailtoUrl = `mailto:thinkyuvraj@gmail.com?subject=Portfolio Inquiry from ${encodeURIComponent(
       formData.name
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
 
-    window.open(mailtoUrl, '_blank');
+    const mailLink = document.createElement('a');
+    mailLink.href = mailtoUrl;
+    mailLink.target = '_blank';
+    mailLink.rel = 'noreferrer';
+    document.body.appendChild(mailLink);
+    mailLink.click();
+    document.body.removeChild(mailLink);
     setFormSubmitted(true);
 
     setTimeout(() => {
