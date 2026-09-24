@@ -69,8 +69,8 @@ function CanvasBackground() {
       const numberOfParticles = (canvas.width * canvas.height) / 12000;
       for (let i = 0; i < numberOfParticles; i++) {
         const size = Math.random() * 2 + 1;
-        const x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
-        const y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+        const x = Math.random() * (canvas.width - size * 4) + size * 2;
+        const y = Math.random() * (canvas.height - size * 4) + size * 2;
         const dx = (Math.random() - 0.5) * 1;
         const dy = (Math.random() - 0.5) * 1;
         particles.push(new Particle(x, y, dx, dy, size));
@@ -79,7 +79,7 @@ function CanvasBackground() {
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
-      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();

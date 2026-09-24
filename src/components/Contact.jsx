@@ -40,26 +40,26 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-6xl mx-auto py-16 md:py-24 px-4 md:px-6">
-      <div className="glass p-6 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] border border-primary/25 relative overflow-hidden shadow-2xl">
+    <section id="contact" className="max-w-6xl mx-auto py-12 md:py-24 px-4 md:px-6">
+      <div className="glass p-4 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-[3rem] border border-primary/25 relative overflow-hidden shadow-2xl">
         {/* Background Radial Glow */}
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/15 rounded-full blur-[100px] pointer-events-none"></div>
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em] bg-primary/10 border border-primary/20 px-3.5 py-1 rounded-full inline-block mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+          <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em] bg-primary/10 border border-primary/20 px-3.5 py-1 rounded-full inline-block mb-2">
             Let's Build Together
           </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-none mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-none mb-3">
             Get in <span className="text-primary">Touch.</span>
           </h2>
           <p className="text-gray-300 text-xs md:text-base leading-relaxed font-light">
-            Have an exciting full-stack role, AI project, or software initiative? Feel free to reach out directly or send a message below.
+            Have an exciting full-stack role, software initiative, or engineering team opening? Feel free to reach out directly or send a message below.
           </p>
         </div>
 
         {/* Contact Method Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-5xl mx-auto mb-10 md:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 max-w-5xl mx-auto mb-8 md:mb-12">
           {/* Email Chip */}
           <div className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all flex items-center justify-between group">
             <div className="flex items-center gap-3 min-w-0">
@@ -167,6 +167,26 @@ function Contact() {
               />
             </div>
           </div>
+          {/* Quick Prompt Presets */}
+          <div className="flex flex-wrap items-center gap-2 pt-1 pb-2">
+            <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mr-1">Quick Presets:</span>
+            {[
+              "🚀 Discuss Full-Time SDE Opportunity",
+              "🤝 Collaborate on Distributed Backend / AI",
+              "📄 Request References / Resume Details",
+              "☕ Virtual Coffee / Tech Chat"
+            ].map((preset, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setFormData(prev => ({ ...prev, message: `Hi Yuvraj,\n\nI came across your portfolio and would like to connect regarding: ${preset}.\n\nLooking forward to discussing more!` }))}
+                className="text-[11px] bg-white/5 hover:bg-primary/20 hover:text-white border border-white/10 hover:border-primary/40 text-gray-300 px-2.5 py-1 rounded-lg transition-all"
+              >
+                {preset}
+              </button>
+            ))}
+          </div>
+
           <div>
             <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">
               Message
