@@ -48,22 +48,18 @@ function Hero() {
   return (
     <>
       <header className="min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 pt-24 pb-12 sm:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
-        {/* Ambient Decorative Background Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-[36rem] lg:w-[48rem] h-64 sm:h-[36rem] lg:h-[48rem] bg-primary/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-        <div className="absolute bottom-10 right-10 w-48 sm:w-80 h-48 sm:h-80 bg-indigo-600/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-
         {/* Transparent Fluid Hero Wrapper */}
         <div className="hero-container w-full relative px-1 sm:px-0">
           {/* 1. Status Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:py-2.5 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-md mb-6 sm:mb-8 shadow-[0_0_25px_rgba(168,85,247,0.25)] max-w-full">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:py-2.5 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-md mb-6 sm:mb-8 max-w-full">
             <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shrink-0"></span>
             <span className="text-purple-300 text-xs sm:text-sm md:text-base font-semibold tracking-tight truncate">
               Open to Full-Time SDE & Engineering Roles (2026)
             </span>
           </div>
 
-          {/* 2. Main Name Title (Increased mobile font size while keeping desktop separate) */}
-          <h1 className="text-[3.4rem] xs:text-[3.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-none mb-5 sm:mb-6 drop-shadow-[0_10px_35px_rgba(168,85,247,0.3)] inline-flex flex-wrap justify-center items-center gap-2 sm:gap-4 w-full whitespace-nowrap">
+          {/* 2. Main Name Title */}
+          <h1 className="text-[3.4rem] xs:text-[3.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-none mb-5 sm:mb-6 inline-flex flex-wrap justify-center items-center gap-2 sm:gap-4 w-full whitespace-nowrap">
             <span>{hero.title}</span>
             <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase">
               {hero.subtitle}
@@ -73,7 +69,7 @@ function Hero() {
           {/* 3. Role Sub-header with Fluid Gradient Lines */}
           <div className="flex items-center justify-center gap-3 sm:gap-6 my-4 sm:my-6 w-full max-w-3xl mx-auto">
             <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-purple-500/50"></span>
-            <span className="text-purple-300 font-extrabold text-[11px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-glow shrink-0 transition-all duration-500">
+            <span className="text-purple-300 font-extrabold text-[11px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase shrink-0 transition-all duration-500">
               {ROLES[roleIndex]}
             </span>
             <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-purple-500/50"></span>
@@ -92,7 +88,7 @@ function Hero() {
           <div className="flex justify-center mb-8 sm:mb-12">
             <div
               onClick={() => setHighlightIndex((prev) => (prev + 1) % HIGHLIGHTS.length)}
-              className="inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-primary/30 bg-white/[0.04] backdrop-blur-xl text-xs sm:text-sm md:text-base font-medium text-gray-200 shadow-[0_0_30px_rgba(168,85,247,0.22)] hover:border-primary/60 transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-primary/30 bg-white/[0.04] backdrop-blur-xl text-xs sm:text-sm md:text-base font-medium text-gray-200 hover:border-primary/60 transition-colors cursor-pointer group"
             >
               <i className={`${HIGHLIGHTS[highlightIndex].icon} ${HIGHLIGHTS[highlightIndex].color} text-base shrink-0 transition-colors`}></i>
               <span className="transition-all duration-300 text-white font-semibold">
@@ -105,7 +101,7 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-5 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto">
             <a
               href="#experience"
-              className="btn-shimmer w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-primary hover:bg-purple-600 text-black font-black text-xs sm:text-sm md:text-base tracking-wide rounded-full shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all flex items-center justify-center gap-2.5"
+              className="btn-shimmer w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-primary hover:bg-purple-600 text-black font-black text-xs sm:text-sm md:text-base tracking-wide rounded-full transition-all flex items-center justify-center gap-2.5"
             >
               <i className="fa-solid fa-graduation-cap text-sm"></i>
               <span>Career Roadmap</span>
