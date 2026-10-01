@@ -35,22 +35,22 @@ function CareerPath() {
           {experience.map((exp, index) => (
             <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} glareEnable={true} glareMaxOpacity={0.08} glareColor="#a855f7" scale={1.01} transitionSpeed={2500}>
               <div className="bento-card p-5 rounded-2xl border-l-4 border-primary">
-                <div className="flex justify-between items-start gap-2 mb-1.5">
-                  <h4 className="text-base font-bold text-white leading-snug">{exp.role}</h4>
+                <div className="flex justify-between items-start gap-2 mb-1">
+                  <h4 className="text-base font-bold text-white leading-snug">
+                    {exp.companyLink ? (
+                      <a href={exp.companyLink} target="_blank" rel="noreferrer" className="text-white hover:text-primary transition-colors inline-flex items-center gap-1">
+                        {exp.company} <i className="fa-solid fa-arrow-up-right-from-square text-[10px] text-primary"></i>
+                      </a>
+                    ) : (
+                      exp.company
+                    )}
+                  </h4>
                   <span className="text-primary text-[10px] font-bold uppercase tracking-wider bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/20 shrink-0">
                     {exp.date}
                   </span>
                 </div>
 
-                <p className="text-gray-300 font-medium text-xs mb-2">
-                  {exp.companyLink ? (
-                    <a href={exp.companyLink} target="_blank" rel="noreferrer" className="text-primary hover:underline">
-                      {exp.company} <i className="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
-                    </a>
-                  ) : (
-                    exp.company
-                  )}
-                </p>
+                <p className="text-purple-300 font-semibold text-xs mb-2">{exp.role}</p>
 
                 {exp.tech && (
                   <p className="text-primary text-[11px] font-semibold italic mb-2">

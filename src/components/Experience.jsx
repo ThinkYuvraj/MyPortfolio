@@ -15,9 +15,9 @@ function Experience() {
           <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} glareEnable={true} glareMaxOpacity={0.1} glareColor="#a855f7" scale={1.01} transitionSpeed={2500}>
             <div className="bento-card p-6 md:p-8 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-4">
               <div className="flex-1">
-                <div className="flex flex-wrap items-baseline gap-2 mb-2">
-                  <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-                  <span className="text-primary/90 font-semibold text-sm">| {exp.company}</span>
+                <div className="mb-2">
+                  <h3 className="text-xl font-bold text-white">{exp.company}</h3>
+                  <p className="text-purple-300 font-semibold text-sm mt-0.5">{exp.role}</p>
                 </div>
                 {exp.tech && (
                   <p className="text-gray-400 text-xs font-semibold italic mb-4">
