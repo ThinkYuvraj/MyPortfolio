@@ -27,7 +27,7 @@ const TRACKS = [
     id: 1,
     badge: "FASTAPI, NODE.JS & DATABASES",
     badgeIcon: "fa-database",
-    badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/30",
+    badgeColor: "text-purple-400 bg-purple-500/10 border-purple-500/30",
     title: "Backend & Systems Engineer",
     subTitle: "Designing High-Throughput REST APIs, Microservices & Data Storage",
     tagline: "Specializing in backend service architecture, schema design, authentication security, and high-performance API endpoints for data-intensive web applications.",
@@ -47,7 +47,7 @@ const TRACKS = [
     id: 2,
     badge: "AWS FOUNDATIONS & MICROSERVICES",
     badgeIcon: "fa-cloud",
-    badgeColor: "text-sky-400 bg-sky-500/10 border-sky-500/30",
+    badgeColor: "text-purple-400 bg-purple-500/10 border-purple-500/30",
     title: "Cloud & Scalability Engineer",
     subTitle: "Deploying Containerized Services & Resilient Cloud Infrastructure",
     tagline: "Applying AWS Cloud Foundations and containerization best practices to build automated CI/CD deployment workflows and cloud-native web services.",
@@ -89,8 +89,8 @@ function FuturePath() {
             <span className="text-purple-300 text-[10px] font-bold uppercase tracking-[0.25em] bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full">
               CAREER TRAJECTORY & 2026 FOCUS
             </span>
-            <span className="text-emerald-400 text-[10px] font-bold bg-emerald-950/30 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="text-purple-300 text-[10px] font-bold bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
               Open for 2026 SDE Roles
             </span>
           </div>
@@ -114,7 +114,7 @@ function FuturePath() {
             <span>Tech Radar</span>
           </a>
           <a href="#career-path" className="px-3.5 py-1.5 rounded-xl hover:bg-white/5 text-gray-300 hover:text-white font-semibold text-xs transition-colors flex items-center gap-1.5">
-            <i className="fa-solid fa-route text-[11px] text-indigo-400"></i>
+            <i className="fa-solid fa-route text-[11px] text-purple-400"></i>
             <span>Milestones</span>
           </a>
         </div>
@@ -138,7 +138,7 @@ function FuturePath() {
                 <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${track.badgeColor}`}>
                   {track.badge}
                 </span>
-                <i className={`fa-solid ${track.badgeIcon} text-xs text-gray-400`}></i>
+                <i className={`fa-solid ${track.badgeIcon} text-xs text-purple-400`}></i>
               </div>
 
               <h3 className="text-base font-bold text-white mb-4 leading-snug">{track.title}</h3>
@@ -181,7 +181,7 @@ function FuturePath() {
             {/* Immediate Day-One Engineering Contributions */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-3">
-                <i className="fa-solid fa-bolt text-amber-400 text-xs"></i>
+                <i className="fa-solid fa-bolt text-purple-400 text-xs"></i>
                 IMMEDIATE DAY-ONE ENGINEERING CONTRIBUTIONS
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -197,7 +197,7 @@ function FuturePath() {
             {/* Grounded in Shipped Production Experience */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-3">
-                <i className="fa-solid fa-shield-halved text-emerald-400 text-xs"></i>
+                <i className="fa-solid fa-shield-halved text-purple-400 text-xs"></i>
                 GROUNDED IN SHIPPED PRODUCTION EXPERIENCE
               </h4>
               <div className="space-y-2">

@@ -55,9 +55,9 @@ function Hero() {
         {/* Transparent Fluid Hero Wrapper */}
         <div className="hero-container w-full relative px-1 sm:px-0">
           {/* 1. Status Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:py-2.5 rounded-full border border-emerald-500/40 bg-emerald-950/25 backdrop-blur-md mb-6 sm:mb-8 shadow-[0_0_25px_rgba(16,185,129,0.2)] max-w-full">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-            <span className="text-emerald-300 text-xs sm:text-sm md:text-base font-semibold tracking-tight truncate">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:py-2.5 rounded-full border border-primary/40 bg-primary/10 backdrop-blur-md mb-6 sm:mb-8 shadow-[0_0_25px_rgba(168,85,247,0.25)] max-w-full">
+            <span className="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse shrink-0"></span>
+            <span className="text-purple-300 text-xs sm:text-sm md:text-base font-semibold tracking-tight truncate">
               Open to Full-Time SDE & Engineering Roles (2026)
             </span>
           </div>
