@@ -89,7 +89,7 @@ function FuturePath() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter leading-none mb-3">
-            FUTURE <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic">PATH & HORIZON</span>
+            MY NEXT <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic">MILESTONE</span>
           </h2>
           <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-2xl font-light leading-relaxed">
             An interactive roadmap of target engineering roles, immediate day-one impact for engineering teams, and upcoming technical capabilities for 2026.
