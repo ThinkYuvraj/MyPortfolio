@@ -10,8 +10,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 top-0 px-4 md:px-6 py-4 md:py-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center glass rounded-2xl px-6 md:px-8 py-4">
+      <nav className="fixed w-full z-50 top-0 px-3 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 pointer-events-none">
+        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-3xl px-5 sm:px-8 py-3.5 sm:py-4 pointer-events-auto shadow-2xl">
           <a href="#" className="text-lg md:text-xl font-black tracking-tighter uppercase italic">
             <span className="text-primary">YUVRAJ SINGH</span>
           </a>
