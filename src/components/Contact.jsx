@@ -52,82 +52,124 @@ function Contact() {
           </p>
         </div>
 
-        {/* Contact Method Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 max-w-5xl mx-auto mb-10 md:mb-12">
-          {/* Email Chip */}
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all flex items-center justify-between group">
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0 group-hover:bg-primary group-hover:text-black transition-all">
+        {/* Contact Method Cards Grid (2 columns on md/lg screens for full spacious readability) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10 md:mb-12">
+          {/* Email Card */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group">
+            <div className="flex items-center gap-3.5 min-w-0">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <i className="fa-solid fa-envelope"></i>
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Email</p>
-                <p className="text-xs text-white font-semibold truncate">thinkyuvraj@gmail.com</p>
+                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">Email</p>
+                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+                  thinkyuvraj@gmail.com
+                </p>
               </div>
             </div>
             <button
-              onClick={() => handleCopy("thinkyuvraj@gmail.com", "Email")}
-              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
+              onClick={() => handleCopy('thinkyuvraj@gmail.com', 'Email')}
+              className={`px-3 py-1.5 rounded-lg border text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5 ${
+                copiedText === 'Email'
+                  ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
+                  : 'bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary'
+              }`}
             >
-              {copiedText === 'Email' ? 'Copied! ✓' : 'Copy'}
+              {copiedText === 'Email' ? (
+                <>
+                  <i className="fa-solid fa-check text-[11px]"></i>
+                  <span>Copied</span>
+                </>
+              ) : (
+                <>
+                  <i className="fa-regular fa-copy text-[11px]"></i>
+                  <span>Copy</span>
+                </>
+              )}
             </button>
           </div>
 
-          {/* Phone Chip */}
-          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all flex items-center justify-between group">
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0 group-hover:bg-primary group-hover:text-black transition-all">
+          {/* Phone Card */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group">
+            <div className="flex items-center gap-3.5 min-w-0">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <i className="fa-solid fa-phone"></i>
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Phone</p>
-                <p className="text-xs text-white font-semibold truncate">+91-9639677118</p>
+                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">Phone</p>
+                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+                  +91-9639677118
+                </p>
               </div>
             </div>
             <button
-              onClick={() => handleCopy("+91-9639677118", "Phone")}
-              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
+              onClick={() => handleCopy('+91-9639677118', 'Phone')}
+              className={`px-3 py-1.5 rounded-lg border text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5 ${
+                copiedText === 'Phone'
+                  ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
+                  : 'bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary'
+              }`}
             >
-              {copiedText === 'Phone' ? 'Copied! ✓' : 'Copy'}
+              {copiedText === 'Phone' ? (
+                <>
+                  <i className="fa-solid fa-check text-[11px]"></i>
+                  <span>Copied</span>
+                </>
+              ) : (
+                <>
+                  <i className="fa-regular fa-copy text-[11px]"></i>
+                  <span>Copy</span>
+                </>
+              )}
             </button>
           </div>
 
-          {/* LinkedIn Link Chip */}
+          {/* LinkedIn Card */}
           <a
             href="https://linkedin.com/in/thinkyuvraj"
             target="_blank"
             rel="noreferrer"
-            className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all flex items-center justify-between group"
+            className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group"
           >
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0 group-hover:bg-primary group-hover:text-black transition-all">
+            <div className="flex items-center gap-3.5 min-w-0">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <i className="fa-brands fa-linkedin"></i>
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">LinkedIn</p>
-                <p className="text-xs text-white font-semibold truncate">thinkyuvraj</p>
+                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">LinkedIn</p>
+                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+                  thinkyuvraj
+                </p>
               </div>
             </div>
-            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors shrink-0 ml-2"></i>
+            <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-primary/30 group-hover:bg-primary/10 text-gray-300 group-hover:text-primary text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5">
+              <span>Open</span>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </div>
           </a>
 
-          {/* GitHub Link Chip */}
+          {/* GitHub Card */}
           <a
             href="https://github.com/ThinkYuvraj"
             target="_blank"
             rel="noreferrer"
-            className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all flex items-center justify-between group"
+            className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group"
           >
-            <div className="flex items-center gap-3 min-w-0">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm shrink-0 group-hover:bg-primary group-hover:text-black transition-all">
+            <div className="flex items-center gap-3.5 min-w-0">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
                 <i className="fa-brands fa-github"></i>
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">GitHub</p>
-                <p className="text-xs text-white font-semibold truncate">ThinkYuvraj</p>
+                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">GitHub</p>
+                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+                  ThinkYuvraj
+                </p>
               </div>
             </div>
-            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors shrink-0 ml-2"></i>
+            <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-primary/30 group-hover:bg-primary/10 text-gray-300 group-hover:text-primary text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5">
+              <span>Open</span>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </div>
           </a>
         </div>
 
@@ -144,7 +186,7 @@ function Contact() {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
               />
             </div>
             <div>
@@ -157,7 +199,7 @@ function Contact() {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
               />
             </div>
           </div>
@@ -171,14 +213,14 @@ function Contact() {
               placeholder="Hi Yuvraj, I'd like to discuss a software engineering opportunity..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
+              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
             ></textarea>
           </div>
 
           <div className="text-center pt-2">
             <button
               type="submit"
-              className="btn-shimmer px-10 py-4 bg-primary text-black font-black uppercase text-xs tracking-widest rounded-xl hover:scale-105 transition-all shadow-[0_10px_35px_rgba(168,85,247,0.4)] w-full sm:w-auto flex items-center justify-center gap-2 mx-auto"
+              className="btn-shimmer px-10 py-4 bg-primary hover:bg-purple-600 text-black font-black uppercase text-xs tracking-widest rounded-xl transition-colors shadow-[0_10px_35px_rgba(168,85,247,0.4)] w-full sm:w-auto flex items-center justify-center gap-2 mx-auto"
             >
               <span>{formSubmitted ? 'Message Prepared! Opening Mail App ✓' : 'Send Message'}</span>
               <i className="fa-solid fa-paper-plane text-[10px]"></i>
@@ -194,7 +236,7 @@ function Contact() {
               href={social.link}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-primary transition-all flex items-center gap-2 text-xs uppercase font-bold tracking-widest"
+              className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 text-xs uppercase font-bold tracking-widest"
             >
               <i className={social.icon}></i> {social.text}
             </a>

@@ -20,6 +20,7 @@ function Navbar() {
             <a href="#about" className="hover:text-primary transition-all">About</a>
             <a href="#skills" className="hover:text-primary transition-all">Skills</a>
             <a href="#projects" className="hover:text-primary transition-all">Projects</a>
+            <a href="#future-path" className="hover:text-primary transition-all">Future Path</a>
             <a href="#career-path" className="hover:text-primary transition-all">Career Path</a>
             <a href="#contact" className="hover:text-primary transition-all">Contact</a>
           </div>
@@ -48,6 +49,7 @@ function Navbar() {
           <a href="#about" onClick={closeMenu} className="hover:text-primary">About</a>
           <a href="#skills" onClick={closeMenu} className="hover:text-primary">Skills</a>
           <a href="#projects" onClick={closeMenu} className="hover:text-primary">Projects</a>
+          <a href="#future-path" onClick={closeMenu} className="hover:text-primary">Future Path</a>
           <a href="#career-path" onClick={closeMenu} className="hover:text-primary">Career Path</a>
           <a href="#contact" onClick={closeMenu} className="hover:text-primary">Contact</a>
         </div>

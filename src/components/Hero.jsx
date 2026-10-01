@@ -4,66 +4,120 @@ import { portfolioData } from '../data/portfolio';
 import ResumeModal from './ResumeModal';
 
 const ROLES = [
-  "Full-Stack Web Developer",
-  "Software Developer Intern @ MarketinGlu",
-  "MERN Stack Specialist (React & Node.js)",
-  "RESTful API & Backend Architect"
+  "FULL-STACK WEB DEVELOPER",
+  "SOFTWARE DEVELOPER INTERN @ MARKETINGLU",
+  "MERN STACK SPECIALIST (REACT & NODE.JS)",
+  "RESTFUL API & BACKEND ARCHITECT"
+];
+
+const HIGHLIGHTS = [
+  { icon: "fa-solid fa-graduation-cap", label: "Amity '26 (7.33 CGPA)", color: "text-purple-400" },
+  { icon: "fa-solid fa-floppy-disk", label: "IEEE Xplore 1st-Author", color: "text-indigo-400" },
+  { icon: "fa-brands fa-aws", label: "AWS Academy Graduate", color: "text-amber-400" },
+  { icon: "fa-solid fa-briefcase", label: "SmartBridge & Jabsz Intern", color: "text-emerald-400" }
 ];
 
 function Hero() {
   const { hero } = portfolioData;
   const [roleIndex, setRoleIndex] = useState(0);
+  const [highlightIndex, setHighlightIndex] = useState(0);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   useEffect(() => {
     // Dynamic Intro Animation
-    gsap.fromTo(".hero-content", 
-      { opacity: 0, y: 40, scale: 0.95, filter: "blur(8px)" },
-      { opacity: 1, y: 0, scale: 1, filter: "blur(0px)", duration: 1.2, ease: "expo.out" }
+    gsap.fromTo(
+      ".hero-container",
+      { opacity: 0, y: 30, filter: "blur(6px)" },
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, ease: "power3.out" }
     );
 
-    const interval = setInterval(() => {
+    const roleTimer = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % ROLES.length);
-    }, 3000);
+    }, 3200);
 
-    return () => clearInterval(interval);
+    const highlightTimer = setInterval(() => {
+      setHighlightIndex((prev) => (prev + 1) % HIGHLIGHTS.length);
+    }, 2800);
+
+    return () => {
+      clearInterval(roleTimer);
+      clearInterval(highlightTimer);
+    };
   }, []);
 
   return (
     <>
-      <header className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative z-10 pt-28 pb-16">
-        {/* Background Decorative Glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-[32rem] h-72 md:h-[32rem] bg-primary/20 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+      <header className="min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 pt-24 pb-12 sm:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
+        {/* Ambient Decorative Background Glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-[36rem] lg:w-[48rem] h-64 sm:h-[36rem] lg:h-[48rem] bg-primary/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+        <div className="absolute bottom-10 right-10 w-48 sm:w-80 h-48 sm:h-80 bg-indigo-600/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] font-black uppercase leading-none tracking-tighter text-white italic">
-          {hero.title}
-          <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase block sm:inline ml-2">
-            {hero.subtitle}
-          </span>
-        </h1>
-
-        <div className="hero-content max-w-4xl mx-auto w-full">
-          <div className="h-8 my-4 md:my-6 flex items-center justify-center">
-            <span className="px-4 md:px-5 py-1.5 md:py-2 rounded-full border border-primary/40 text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] md:tracking-[0.3em] bg-primary/10 text-glow transition-all duration-500 max-w-full truncate">
-              {ROLES[roleIndex]}
+        {/* Transparent Fluid Hero Wrapper */}
+        <div className="hero-container w-full relative px-1 sm:px-0">
+          {/* 1. Status Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 sm:py-2.5 rounded-full border border-emerald-500/40 bg-emerald-950/25 backdrop-blur-md mb-6 sm:mb-8 shadow-[0_0_25px_rgba(16,185,129,0.2)] max-w-full">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span className="text-emerald-300 text-xs sm:text-sm md:text-base font-semibold tracking-tight truncate">
+              Open to Full-Time SDE & Engineering Roles (2026)
             </span>
           </div>
 
-          <p className="mt-3 md:mt-6 text-gray-300 text-sm md:text-xl max-w-3xl mx-auto font-light tracking-wide leading-relaxed px-2">
-            {hero.description}
+          {/* 2. Main Name Title (Slightly reduced for balanced proportions) */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-none mb-5 sm:mb-6 drop-shadow-[0_10px_35px_rgba(168,85,247,0.3)] inline-flex flex-wrap justify-center items-center gap-2 sm:gap-4 w-full">
+            <span>{hero.title}</span>
+            <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase">
+              {hero.subtitle}
+            </span>
+          </h1>
+
+          {/* 3. Role Sub-header with Fluid Gradient Lines */}
+          <div className="flex items-center justify-center gap-3 sm:gap-6 my-4 sm:my-6 w-full max-w-3xl mx-auto">
+            <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-purple-500/50"></span>
+            <span className="text-purple-300 font-extrabold text-[11px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-glow shrink-0 transition-all duration-500">
+              {ROLES[roleIndex]}
+            </span>
+            <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-purple-500/50"></span>
+          </div>
+
+          {/* 4. Description Paragraph */}
+          <p className="text-gray-300 text-xs sm:text-base md:text-lg max-w-3xl mx-auto font-light leading-relaxed px-2 sm:px-0 mb-6 sm:mb-8">
+            Engineering scalable full-stack web applications with{' '}
+            <span className="text-purple-300 font-semibold italic">JavaScript, React.js, Node.js & Express.js</span>
+            . Passionate about{' '}
+            <span className="text-purple-300 font-semibold italic">RESTful APIs, Microservices</span> and{' '}
+            <span className="text-purple-300 font-semibold italic">Cloud Architecture</span>.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center w-full sm:w-auto px-4 sm:px-0">
-            <a href="#contact"
-              className="btn-shimmer px-8 md:px-10 py-3.5 md:py-4 bg-primary text-black font-black uppercase text-xs tracking-widest rounded-xl hover:scale-105 transition-all shadow-[0_10px_35px_rgba(168,85,247,0.4)] text-center">
-              Start a Conversation <i className="fa-solid fa-arrow-right ml-2"></i>
+          {/* 5. Dynamic Cycling Glass Pill Badge */}
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <div
+              onClick={() => setHighlightIndex((prev) => (prev + 1) % HIGHLIGHTS.length)}
+              className="inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full border border-primary/30 bg-white/[0.04] backdrop-blur-xl text-xs sm:text-sm md:text-base font-medium text-gray-200 shadow-[0_0_30px_rgba(168,85,247,0.22)] hover:border-primary/60 transition-colors cursor-pointer group"
+            >
+              <i className={`${HIGHLIGHTS[highlightIndex].icon} ${HIGHLIGHTS[highlightIndex].color} text-base shrink-0 transition-colors`}></i>
+              <span className="transition-all duration-300 text-white font-semibold">
+                {HIGHLIGHTS[highlightIndex].label}
+              </span>
+            </div>
+          </div>
+
+          {/* 6. CTA Pill Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-5 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto">
+            <a
+              href="#experience"
+              className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm md:text-base tracking-wide rounded-full shadow-[0_0_35px_rgba(168,85,247,0.45)] transition-colors flex items-center justify-center gap-2.5"
+            >
+              <i className="fa-solid fa-graduation-cap text-sm"></i>
+              <span>Career Roadmap</span>
+              <i className="fa-solid fa-arrow-right text-xs"></i>
             </a>
+
             <button
               onClick={() => setIsResumeModalOpen(true)}
-              className="px-8 md:px-10 py-3.5 md:py-4 glass border border-primary/50 text-white font-black uppercase text-xs tracking-widest rounded-xl hover:bg-primary/20 hover:border-primary transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-black/40 border border-purple-500/40 hover:border-purple-500/80 hover:bg-purple-500/10 text-white font-extrabold text-xs sm:text-sm md:text-base tracking-wide rounded-full transition-colors flex items-center justify-center gap-2.5"
             >
-              View Resume <i className="fa-solid fa-file-pdf"></i>
+              <i className="fa-solid fa-file-lines text-sm text-purple-300"></i>
+              <span>View Resume</span>
             </button>
           </div>
         </div>
