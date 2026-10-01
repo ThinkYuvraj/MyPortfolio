@@ -72,25 +72,25 @@ function CareerPath() {
         <div className="space-y-4">
           <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-2">
             <h3 className="text-lg font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <i className="fa-solid fa-graduation-cap text-fuchsia-400 text-sm"></i> Education
+              <i className="fa-solid fa-graduation-cap text-purple-400 text-sm"></i> Education
             </h3>
-            <span className="text-[10px] text-fuchsia-400 font-bold bg-fuchsia-500/10 px-2.5 py-0.5 rounded-full border border-fuchsia-500/20">
+            <span className="text-[10px] text-purple-300 font-bold bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/30">
               {education.length} Degrees
             </span>
           </div>
 
           {education.map((edu, index) => (
             <Tilt key={index} tiltMaxAngleX={3} tiltMaxAngleY={3} glareEnable={true} glareMaxOpacity={0.08} glareColor="#a855f7" scale={1.01} transitionSpeed={2500}>
-              <div className="bento-card p-5 rounded-2xl border-l-4 border-fuchsia-500">
+              <div className="bento-card p-5 rounded-2xl border-l-4 border-primary">
                 <div className="flex justify-between items-start gap-2 mb-1">
                   <h4 className="text-base font-bold text-white leading-snug">{edu.institution}</h4>
-                  <span className="text-fuchsia-400 text-[10px] font-bold uppercase tracking-wider bg-fuchsia-500/10 px-2.5 py-0.5 rounded-full border border-fuchsia-500/20 shrink-0">
+                  <span className="text-purple-300 text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 px-2.5 py-0.5 rounded-full border border-purple-500/30 shrink-0">
                     {edu.duration}
                   </span>
                 </div>
 
                 <p className="text-gray-300 font-medium text-xs mb-1.5">{edu.degree}</p>
-                <p className="text-primary font-bold text-xs italic mb-2">{edu.score}</p>
+                <p className="text-fuchsia-400 font-bold text-xs italic mb-2">{edu.score}</p>
 
                 {edu.coursework && (
                   <div className="flex flex-wrap gap-1 mt-2">
@@ -112,20 +112,20 @@ function CareerPath() {
         {/* IEEE Publications */}
         <div>
           <h3 className="text-base font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-            <i className="fa-solid fa-book-bookmark text-fuchsia-400 text-sm"></i> Publications
+            <i className="fa-solid fa-book-bookmark text-purple-400 text-sm"></i> Publications
           </h3>
           <Tilt tiltMaxAngleX={3} tiltMaxAngleY={3} glareEnable={true} glareMaxOpacity={0.08} glareColor="#a855f7" scale={1.01} transitionSpeed={2500}>
-            <div className="bento-card p-5 rounded-2xl border-l-4 border-fuchsia-500">
+            <div className="bento-card p-5 rounded-2xl border-l-4 border-primary">
               {publications.map((pub, index) => (
                 <div key={index} className="space-y-2">
-                  <span className="text-fuchsia-400 text-[9px] font-black uppercase tracking-widest bg-fuchsia-500/10 border border-fuchsia-500/20 px-2.5 py-0.5 rounded-full inline-block">
+                  <span className="text-purple-300 text-[9px] font-black uppercase tracking-widest bg-purple-500/10 border border-purple-500/30 px-2.5 py-0.5 rounded-full inline-block">
                     IEEE Conference Paper
                   </span>
                   <h4 className="text-sm font-bold text-white leading-snug">
                     "{pub.title}"
                   </h4>
                   <p className="text-gray-400 text-xs italic">{pub.venue}</p>
-                  <p className="text-primary text-xs font-mono font-semibold">{pub.documentId}</p>
+                  <p className="text-purple-400 text-xs font-mono font-semibold">{pub.documentId}</p>
                 </div>
               ))}
             </div>
