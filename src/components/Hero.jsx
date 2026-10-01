@@ -105,7 +105,7 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-5 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto">
             <a
               href="#experience"
-              className="w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm md:text-base tracking-wide rounded-full shadow-[0_0_35px_rgba(168,85,247,0.45)] transition-colors flex items-center justify-center gap-2.5"
+              className="btn-shimmer w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-4.5 bg-primary hover:bg-purple-600 text-black font-black text-xs sm:text-sm md:text-base tracking-wide rounded-full shadow-[0_0_35px_rgba(168,85,247,0.5)] transition-all flex items-center justify-center gap-2.5"
             >
               <i className="fa-solid fa-graduation-cap text-sm"></i>
               <span>Career Roadmap</span>
