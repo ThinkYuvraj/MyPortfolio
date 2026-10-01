@@ -155,10 +155,10 @@ function FuturePath() {
       </div>
 
       {/* 3. Transparent Glass Active Details Panel */}
-      <div className="glass p-6 sm:p-8 md:p-10 rounded-[2rem] border border-primary/30 relative overflow-hidden shadow-2xl backdrop-blur-2xl">
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
+      <div className="glass p-5 sm:p-7 md:p-8 rounded-[2rem] border border-primary/30 relative overflow-hidden shadow-2xl backdrop-blur-2xl">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch">
           {/* Left Column: Role Breakdown */}
-          <div className="flex-1 space-y-6 text-left">
+          <div className="flex-1 space-y-5 text-left">
             {/* Track Header */}
             <div>
               <div className="flex items-center gap-2 mb-2">
@@ -170,7 +170,7 @@ function FuturePath() {
               <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-1">
                 {currentTrack.title}
               </h3>
-              <p className="text-primary text-xs sm:text-sm font-semibold italic mb-3">
+              <p className="text-primary text-xs sm:text-sm font-semibold italic mb-2">
                 {currentTrack.subTitle}
               </p>
               <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed">
@@ -180,14 +180,14 @@ function FuturePath() {
 
             {/* Immediate Day-One Engineering Contributions */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-3">
+              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-2.5">
                 <i className="fa-solid fa-bolt text-purple-400 text-xs"></i>
                 IMMEDIATE DAY-ONE ENGINEERING CONTRIBUTIONS
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
                 {currentTrack.contributions.map((item, index) => (
-                  <div key={index} className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-gray-300 font-light leading-relaxed flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+                  <div key={index} className="p-3 rounded-xl bg-white/[0.02] border border-white/10 hover:border-primary/40 transition-all text-xs text-gray-300 font-light leading-snug flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1 shrink-0"></span>
                     <span>{item}</span>
                   </div>
                 ))}
@@ -196,15 +196,18 @@ function FuturePath() {
 
             {/* Grounded in Shipped Production Experience */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-3">
+              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white flex items-center gap-2 mb-2.5">
                 <i className="fa-solid fa-shield-halved text-purple-400 text-xs"></i>
                 GROUNDED IN SHIPPED PRODUCTION EXPERIENCE
               </h4>
-              <div className="space-y-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
                 {currentTrack.experience.map((exp, index) => (
-                  <div key={index} className="p-3 rounded-xl bg-white/[0.03] border border-white/10 text-xs flex flex-wrap items-center gap-2">
-                    <span className="text-white font-bold">{exp.role}</span>
-                    <span className="text-gray-300 font-light">{exp.desc}</span>
+                  <div key={index} className="p-3 rounded-xl bg-white/[0.02] border border-white/10 hover:border-primary/40 transition-all flex flex-col justify-between text-xs space-y-1">
+                    <span className="text-white font-bold text-xs flex items-center gap-1.5">
+                      <i className="fa-solid fa-circle-check text-purple-400 text-[10px]"></i>
+                      {exp.role}
+                    </span>
+                    <span className="text-gray-300 font-light text-[11px] leading-snug">{exp.desc}</span>
                   </div>
                 ))}
               </div>
@@ -212,12 +215,12 @@ function FuturePath() {
 
             {/* Target Stack Proficiency */}
             <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2.5">
+              <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
                 TARGET STACK PROFICIENCY
               </h4>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {currentTrack.stack.map((tech, index) => (
-                  <span key={index} className="px-3 py-1 rounded-lg bg-primary/10 border border-primary/20 text-purple-300 text-xs font-semibold">
+                  <span key={index} className="px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/20 text-purple-300 text-xs font-semibold hover:border-primary/50 transition-all">
                     {tech}
                   </span>
                 ))}
@@ -226,9 +229,9 @@ function FuturePath() {
           </div>
 
           {/* Right Column: Recruiter Executive Digest Box */}
-          <div className="w-full lg:w-80 shrink-0 p-5 sm:p-6 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 flex flex-col justify-between space-y-6">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+          <div className="w-full lg:w-80 shrink-0 p-4 sm:p-5 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-white/10 flex flex-col justify-between space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between border-b border-white/10 pb-2.5">
                 <h4 className="text-xs font-extrabold uppercase tracking-widest text-white">
                   RECRUITER EXECUTIVE DIGEST
                 </h4>
@@ -236,16 +239,16 @@ function FuturePath() {
               </div>
 
               {/* Quote Card */}
-              <div className="p-4 rounded-xl bg-black/40 border border-white/10 italic text-xs text-gray-300 leading-relaxed">
+              <div className="p-3.5 rounded-xl bg-black/50 border border-white/10 italic text-[11px] text-gray-300 leading-relaxed">
                 "{blurbText}"
               </div>
             </div>
 
             {/* Recruiter Actions */}
-            <div className="space-y-2.5 pt-2">
+            <div className="space-y-2 pt-1">
               <button
                 onClick={handleCopyBlurb}
-                className="w-full py-3 px-4 rounded-xl bg-primary hover:bg-purple-600 text-black font-extrabold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(168,85,247,0.3)]"
+                className="w-full py-2.5 px-3.5 rounded-xl bg-primary hover:bg-purple-600 text-black font-extrabold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(168,85,247,0.25)]"
               >
                 <i className={`fa-solid ${copiedBlurb ? 'fa-check' : 'fa-copy'} text-xs`}></i>
                 <span>{copiedBlurb ? 'Copied Blurb! ✓' : 'Copy Recruiter Blurb'}</span>
@@ -253,7 +256,7 @@ function FuturePath() {
 
               <button
                 onClick={() => setIsResumeOpen(true)}
-                className="w-full py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
               >
                 <i className="fa-solid fa-file-lines text-xs text-primary"></i>
                 <span>View Verified Resume</span>
@@ -261,7 +264,7 @@ function FuturePath() {
 
               <a
                 href="#contact"
-                className="w-full py-3 px-4 rounded-xl bg-black/40 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 text-gray-300 hover:text-white font-semibold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-3.5 rounded-xl bg-black/40 border border-purple-500/30 hover:border-purple-500/60 hover:bg-purple-500/10 text-gray-300 hover:text-white font-semibold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
               >
                 <i className="fa-solid fa-envelope text-xs text-purple-400"></i>
                 <span>Connect for Interview</span>
