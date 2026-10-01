@@ -82,8 +82,8 @@ function FuturePath() {
             <span className="text-purple-300 text-[10px] font-bold uppercase tracking-[0.25em] bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full">
               CAREER TRAJECTORY & 2026 FOCUS
             </span>
-            <span className="text-purple-300 text-[10px] font-bold bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+            <span className="text-emerald-300 text-[10px] font-bold bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Open for 2026 SDE Roles
             </span>
           </div>
