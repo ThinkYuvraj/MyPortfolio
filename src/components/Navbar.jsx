@@ -17,7 +17,7 @@ function Navbar() {
               <span className="text-primary">YUVRAJ SINGH</span>
             </a>
             <span className="hidden xl:inline-block text-[11px] font-medium text-gray-400 italic border-l border-white/10 pl-3.5 ml-3.5">
-              Full-Stack Web Developer
+              Debugging my life and code
             </span>
           </div>
 
