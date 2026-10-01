@@ -10,30 +10,46 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed w-full z-50 top-0 px-3 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 pointer-events-none">
-        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-3xl px-5 sm:px-8 py-3.5 sm:py-4 pointer-events-auto shadow-2xl">
-          <a href="#" className="text-lg md:text-xl font-black tracking-tighter uppercase italic">
-            <span className="text-primary">YUVRAJ SINGH</span>
-          </a>
-          <p className="hidden lg:block text-xs italic"> Full-Stack Web Developer</p>
-          <div className="hidden lg:flex space-x-6 text-[9px] font-bold uppercase tracking-[0.3em]">
-            <a href="#about" className="hover:text-primary transition-all">About</a>
-            <a href="#skills" className="hover:text-primary transition-all">Skills</a>
-            <a href="#projects" className="hover:text-primary transition-all">Projects</a>
-            <a href="#future-path" className="hover:text-primary transition-all">Next Milestone</a>
-            <a href="#career-path" className="hover:text-primary transition-all">Career Path</a>
-            <a href="#contact" className="hover:text-primary transition-all">Contact</a>
+      <nav className="fixed w-full z-50 top-0 px-3 sm:px-6 md:px-8 py-3 sm:py-4 pointer-events-none">
+        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-full px-5 sm:px-8 py-2.5 sm:py-3 pointer-events-auto shadow-2xl border border-primary/20 backdrop-blur-2xl">
+          <div className="flex items-center">
+            <a href="#" className="text-base sm:text-lg md:text-xl font-black tracking-tight uppercase italic shrink-0">
+              <span className="text-primary">YUVRAJ SINGH</span>
+            </a>
+            <span className="hidden xl:inline-block text-[11px] font-medium text-gray-400 italic border-l border-white/10 pl-3.5 ml-3.5">
+              Full-Stack Web Developer
+            </span>
           </div>
-          <div className="flex items-center space-x-4">
-            <a href={socials.find(s => s.text === 'GitHub')?.link} target="_blank" rel="noreferrer" className="hidden sm:block hover:text-primary transition-all">
+
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-bold uppercase tracking-wider">
+            <a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a>
+            <a href="#skills" className="text-gray-300 hover:text-primary transition-colors">Skills</a>
+            <a href="#projects" className="text-gray-300 hover:text-primary transition-colors">Projects</a>
+            <a href="#future-path" className="text-gray-300 hover:text-primary transition-colors">Next Milestone</a>
+            <a href="#career-path" className="text-gray-300 hover:text-primary transition-colors">Career Path</a>
+            <a href="#contact" className="text-gray-300 hover:text-primary transition-colors">Contact</a>
+          </div>
+
+          <div className="flex items-center space-x-2.5">
+            <a
+              href={socials.find(s => s.text === 'GitHub')?.link}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:flex w-8 h-8 rounded-full bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
+            >
               <i className="fa-brands fa-github"></i>
             </a>
-            <a href={socials.find(s => s.text === 'LinkedIn')?.link} target="_blank" rel="noreferrer" className="hidden sm:block hover:text-primary transition-all">
+            <a
+              href={socials.find(s => s.text === 'LinkedIn')?.link}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:flex w-8 h-8 rounded-full bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
+            >
               <i className="fa-brands fa-linkedin"></i>
             </a>
             
             {/* Mobile Menu Button */}
-            <button onClick={toggleMenu} className="lg:hidden text-primary text-xl">
+            <button onClick={toggleMenu} className="lg:hidden text-primary text-xl p-1">
               <i className="fa-solid fa-bars-staggered"></i>
             </button>
           </div>
