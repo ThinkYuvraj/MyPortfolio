@@ -34,32 +34,34 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-5xl mx-auto py-6 md:py-8 px-4 md:px-6">
-      <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-primary/25 relative overflow-hidden shadow-2xl">
-        {/* Background Radial Glow */}
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/15 rounded-full blur-[100px] pointer-events-none"></div>
+    <section id="contact" className="max-w-5xl mx-auto py-12 md:py-16 px-4 md:px-6">
+      <div className="glass p-6 sm:p-8 md:p-10 rounded-3xl border border-primary/30 relative overflow-hidden shadow-2xl backdrop-blur-2xl">
+        {/* Ambient Radial Background Glow */}
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-4 md:mb-5">
-          <span className="text-primary text-[9px] font-black uppercase tracking-[0.35em] bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
-            Let's Build Together
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-8">
+          <span className="text-purple-300 text-[10px] font-bold uppercase tracking-[0.25em] bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full inline-block mb-3">
+            LET'S BUILD TOGETHER
           </span>
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-white tracking-tighter uppercase italic leading-none mb-1.5">
-            Get in <span className="text-primary">Touch.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter leading-none mb-3">
+            GET IN <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic">TOUCH.</span>
           </h2>
-          <p className="text-gray-300 text-xs leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-gray-300 text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto">
             Have an exciting full-stack role, AI project, or software initiative? Feel free to reach out directly or send a message below.
           </p>
         </div>
 
-        {/* Simple Compact Unboxed Contact Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 md:gap-3.5 max-w-3xl mx-auto mb-4 md:mb-5">
+        {/* Unboxed Glass Contact Links Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 md:gap-4 max-w-3xl mx-auto mb-6 md:mb-8">
           {/* Email */}
-          <div className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group">
-            <div className="flex items-center gap-2.5 min-w-0">
-              <i className="fa-solid fa-envelope text-primary text-sm shrink-0"></i>
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors group flex items-center justify-between">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm shrink-0">
+                <i className="fa-solid fa-envelope"></i>
+              </div>
               <div className="min-w-0 text-left">
-                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Email</p>
+                <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Email</p>
                 <a href="mailto:thinkyuvraj@gmail.com" className="text-xs sm:text-sm text-white font-semibold hover:text-primary transition-colors block truncate">
                   thinkyuvraj@gmail.com
                 </a>
@@ -67,18 +69,20 @@ function Contact() {
             </div>
             <button
               onClick={() => handleCopy('thinkyuvraj@gmail.com', 'Email')}
-              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
+              className="text-xs font-bold text-primary hover:text-purple-300 transition-colors px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 shrink-0 ml-2"
             >
               {copiedText === 'Email' ? 'Copied! ✓' : 'Copy'}
             </button>
           </div>
 
           {/* Phone */}
-          <div className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group">
-            <div className="flex items-center gap-2.5 min-w-0">
-              <i className="fa-solid fa-phone text-primary text-sm shrink-0"></i>
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors group flex items-center justify-between">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm shrink-0">
+                <i className="fa-solid fa-phone"></i>
+              </div>
               <div className="min-w-0 text-left">
-                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Phone</p>
+                <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Phone</p>
                 <a href="tel:+919639677118" className="text-xs sm:text-sm text-white font-semibold hover:text-primary transition-colors block truncate">
                   +91-9639677118
                 </a>
@@ -86,7 +90,7 @@ function Contact() {
             </div>
             <button
               onClick={() => handleCopy('+91-9639677118', 'Phone')}
-              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
+              className="text-xs font-bold text-primary hover:text-purple-300 transition-colors px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 shrink-0 ml-2"
             >
               {copiedText === 'Phone' ? 'Copied! ✓' : 'Copy'}
             </button>
@@ -97,20 +101,22 @@ function Contact() {
             href="https://linkedin.com/in/thinkyuvraj"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group"
+            className="p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors group flex items-center justify-between"
           >
-            <div className="flex items-center gap-2.5 min-w-0">
-              <i className="fa-brands fa-linkedin text-primary text-sm shrink-0"></i>
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm shrink-0">
+                <i className="fa-brands fa-linkedin"></i>
+              </div>
               <div className="min-w-0 text-left">
-                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn</p>
+                <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn</p>
                 <span className="text-xs sm:text-sm text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   thinkyuvraj
                 </span>
               </div>
             </div>
-            <span className="text-[10px] text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
+            <span className="text-xs font-bold text-primary group-hover:text-purple-300 transition-colors px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
-              <i className="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
             </span>
           </a>
 
@@ -119,29 +125,31 @@ function Contact() {
             href="https://github.com/ThinkYuvraj"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group"
+            className="p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors group flex items-center justify-between"
           >
-            <div className="flex items-center gap-2.5 min-w-0">
-              <i className="fa-brands fa-github text-primary text-sm shrink-0"></i>
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm shrink-0">
+                <i className="fa-brands fa-github"></i>
+              </div>
               <div className="min-w-0 text-left">
-                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">GitHub</p>
+                <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">GitHub</p>
                 <span className="text-xs sm:text-sm text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   ThinkYuvraj
                 </span>
               </div>
             </div>
-            <span className="text-[10px] text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
+            <span className="text-xs font-bold text-primary group-hover:text-purple-300 transition-colors px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
-              <i className="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
             </span>
           </a>
         </div>
 
         {/* Form Container */}
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-2.5 text-left">
-          <div className="grid md:grid-cols-2 gap-2.5">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-3.5 text-left">
+          <div className="grid md:grid-cols-2 gap-3.5">
             <div>
-              <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
+              <label className="block text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
                 Your Name
               </label>
               <input
@@ -150,11 +158,11 @@ function Contact() {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                className="w-full px-4 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               />
             </div>
             <div>
-              <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
+              <label className="block text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
                 Your Email
               </label>
               <input
@@ -163,46 +171,47 @@ function Contact() {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                className="w-full px-4 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
               />
             </div>
           </div>
           <div>
-            <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
+            <label className="block text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
               Message
             </label>
             <textarea
               required
-              rows={2}
+              rows={3}
               placeholder="Hi Yuvraj, I'd like to discuss a software engineering opportunity..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+              className="w-full px-4 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"
             ></textarea>
           </div>
 
-          <div className="text-center pt-0.5">
+          <div className="text-center pt-2">
             <button
               type="submit"
-              className="btn-shimmer px-6 py-2 bg-primary hover:bg-purple-600 text-black font-black uppercase text-[10px] tracking-widest rounded-lg transition-colors shadow-[0_6px_20px_rgba(168,85,247,0.3)] w-full sm:w-auto flex items-center justify-center gap-1.5 mx-auto"
+              className="btn-shimmer px-8 py-3 bg-primary hover:bg-purple-600 text-black font-black uppercase text-xs tracking-wider rounded-xl transition-all shadow-[0_0_25px_rgba(168,85,247,0.3)] w-full sm:w-auto flex items-center justify-center gap-2 mx-auto"
             >
               <span>{formSubmitted ? 'Message Prepared! Opening Mail App ✓' : 'Send Message'}</span>
-              <i className="fa-solid fa-paper-plane text-[8px]"></i>
+              <i className="fa-solid fa-paper-plane text-xs"></i>
             </button>
           </div>
         </form>
 
         {/* Footer Bar Links */}
-        <div className="flex flex-wrap justify-center gap-4 mt-4 md:mt-5 pt-3.5 border-t border-white/10">
+        <div className="flex flex-wrap justify-center gap-3.5 mt-6 md:mt-8 pt-5 border-t border-white/10">
           {socials.map((social, index) => (
             <a
               key={index}
               href={social.link}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest"
+              className="px-3.5 py-1.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/40 text-gray-300 hover:text-white transition-colors flex items-center gap-2 text-xs font-semibold"
             >
-              <i className={social.icon}></i> {social.text}
+              <i className={`${social.icon} text-primary`}></i>
+              <span>{social.text}</span>
             </a>
           ))}
         </div>
