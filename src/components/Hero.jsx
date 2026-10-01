@@ -62,8 +62,8 @@ function Hero() {
             </span>
           </div>
 
-          {/* 2. Main Name Title (Slightly reduced for balanced proportions) */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-none mb-5 sm:mb-6 drop-shadow-[0_10px_35px_rgba(168,85,247,0.3)] inline-flex flex-wrap justify-center items-center gap-2 sm:gap-4 w-full">
+          {/* 2. Main Name Title (Increased mobile font size while keeping desktop separate) */}
+          <h1 className="text-[3.4rem] xs:text-[3.8rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-none mb-5 sm:mb-6 drop-shadow-[0_10px_35px_rgba(168,85,247,0.3)] inline-flex flex-wrap justify-center items-center gap-2 sm:gap-4 w-full whitespace-nowrap">
             <span>{hero.title}</span>
             <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase">
               {hero.subtitle}
