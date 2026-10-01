@@ -72,12 +72,6 @@ function About() {
                 <span className="text-white font-bold">Interests: </span>{about.interests}
               </p>
             </div>
-            <div className="flex items-start gap-3 bg-white/5 p-3.5 rounded-xl border border-white/5">
-              <div className="mt-1 h-2 w-2 rounded-full bg-primary shrink-0 shadow-[0_0_10px_#a855f7]"></div>
-              <p className="text-xs md:text-sm text-gray-300">
-                <span className="text-white font-bold">Career Goals: </span>{about.careerGoals}
-              </p>
-            </div>
           </div>
         </div>
       </div>
