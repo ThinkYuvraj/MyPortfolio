@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <>
       <nav className="fixed w-full z-50 top-0 px-3 sm:px-6 md:px-8 py-3 sm:py-4 pointer-events-none">
-        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-full px-5 sm:px-8 py-2.5 sm:py-3 pointer-events-auto shadow-2xl border border-primary/20 backdrop-blur-2xl">
+        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl px-5 sm:px-8 py-2.5 sm:py-3 pointer-events-auto shadow-2xl border border-primary/20 backdrop-blur-2xl">
           <div className="flex items-center">
             <a href="#" className="text-base sm:text-lg md:text-xl font-black tracking-tight uppercase italic shrink-0">
               <span className="text-primary">YUVRAJ SINGH</span>
@@ -35,7 +35,7 @@ function Navbar() {
               href={socials.find(s => s.text === 'GitHub')?.link}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:flex w-8 h-8 rounded-full bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
+              className="hidden sm:flex w-8 h-8 rounded-xl bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
             >
               <i className="fa-brands fa-github"></i>
             </a>
@@ -43,7 +43,7 @@ function Navbar() {
               href={socials.find(s => s.text === 'LinkedIn')?.link}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:flex w-8 h-8 rounded-full bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
+              className="hidden sm:flex w-8 h-8 rounded-xl bg-white/5 border border-white/10 items-center justify-center text-gray-300 hover:text-primary hover:border-primary/50 transition-all text-xs"
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
