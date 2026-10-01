@@ -68,17 +68,10 @@ const TRACKS = [
 function FuturePath() {
   const { hero } = portfolioData;
   const [activeTrack, setActiveTrack] = useState(0);
-  const [copiedBlurb, setCopiedBlurb] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const currentTrack = TRACKS[activeTrack];
   const blurbText = `Yuvraj Singh is a 2026 B.Tech CSE graduate (Amity, 7.33 CGPA) with verified production internship experience at MarketinGlu and SmartBridge. Full-stack proficiency across React, Node.js, and cloud deployments.`;
-
-  const handleCopyBlurb = () => {
-    navigator.clipboard.writeText(blurbText);
-    setCopiedBlurb(true);
-    setTimeout(() => setCopiedBlurb(false), 2500);
-  };
 
   return (
     <section id="future-path" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6">
@@ -247,18 +240,10 @@ function FuturePath() {
             {/* Recruiter Actions */}
             <div className="space-y-2 pt-1">
               <button
-                onClick={handleCopyBlurb}
-                className="w-full py-2.5 px-3.5 rounded-xl bg-primary hover:bg-purple-600 text-black font-extrabold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(168,85,247,0.25)]"
-              >
-                <i className={`fa-solid ${copiedBlurb ? 'fa-check' : 'fa-copy'} text-xs`}></i>
-                <span>{copiedBlurb ? 'Copied Blurb! ✓' : 'Copy Recruiter Blurb'}</span>
-              </button>
-
-              <button
                 onClick={() => setIsResumeOpen(true)}
-                className="w-full py-2.5 px-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+                className="btn-shimmer w-full py-2.5 px-3.5 rounded-xl bg-primary hover:bg-purple-600 text-black font-extrabold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(168,85,247,0.25)]"
               >
-                <i className="fa-solid fa-file-lines text-xs text-primary"></i>
+                <i className="fa-solid fa-file-lines text-xs"></i>
                 <span>View Verified Resume</span>
               </button>
 
