@@ -47,7 +47,7 @@ function Hero() {
 
   return (
     <>
-      <header className="min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 pt-24 pb-12 sm:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
+      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 py-16 md:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
         {/* Transparent Fluid Hero Wrapper */}
         <div className="hero-container w-full relative px-1 sm:px-0">
           {/* 1. Status Badge (Curved Rectangle) */}
