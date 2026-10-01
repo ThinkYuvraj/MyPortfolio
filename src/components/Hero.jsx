@@ -14,7 +14,7 @@ const HIGHLIGHTS = [
   { icon: "fa-solid fa-graduation-cap", label: "Amity '26 (7.33 CGPA)", color: "text-purple-400" },
   { icon: "fa-solid fa-floppy-disk", label: "IEEE Xplore 1st-Author", color: "text-indigo-400" },
   { icon: "fa-brands fa-aws", label: "AWS Academy Graduate", color: "text-amber-400" },
-  { icon: "fa-solid fa-briefcase", label: "SmartBridge & Jabsz Intern", color: "text-emerald-400" }
+  { icon: "fa-solid fa-briefcase", label: "3+ Internships Experience", color: "text-emerald-400" }
 ];
 
 function Hero() {
