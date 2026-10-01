@@ -5,9 +5,11 @@ function CanvasBackground() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    let animationFrameId;
+    if (!ctx) return;
 
+    let animationFrameId;
     let particles = [];
     let mouse = { x: null, y: null, radius: 150 };
 
@@ -17,11 +19,13 @@ function CanvasBackground() {
       initParticles();
     };
 
+    const handleMouseMove = (e) => {
+      mouse.x = e.clientX || e.x;
+      mouse.y = e.clientY || e.y;
+    };
+
     window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.x;
-      mouse.y = e.y;
-    });
+    window.addEventListener('mousemove', handleMouseMove);
 
     class Particle {
       constructor(x, y, dx, dy, size) {
@@ -104,6 +108,7 @@ function CanvasBackground() {
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
