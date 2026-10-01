@@ -34,59 +34,59 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-6xl mx-auto py-16 md:py-24 px-4 md:px-6">
-      <div className="glass p-6 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] border border-primary/25 relative overflow-hidden shadow-2xl">
+    <section id="contact" className="max-w-5xl mx-auto py-6 md:py-8 px-4 md:px-6">
+      <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-primary/25 relative overflow-hidden shadow-2xl">
         {/* Background Radial Glow */}
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/15 rounded-full blur-[100px] pointer-events-none"></div>
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
-          <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em] bg-primary/10 border border-primary/20 px-3.5 py-1 rounded-full inline-block mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-4 md:mb-5">
+          <span className="text-primary text-[9px] font-black uppercase tracking-[0.35em] bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
             Let's Build Together
           </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-none mb-4">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-black text-white tracking-tighter uppercase italic leading-none mb-1.5">
             Get in <span className="text-primary">Touch.</span>
           </h2>
-          <p className="text-gray-300 text-xs md:text-base leading-relaxed font-light">
+          <p className="text-gray-300 text-xs leading-relaxed font-light max-w-2xl mx-auto">
             Have an exciting full-stack role, AI project, or software initiative? Feel free to reach out directly or send a message below.
           </p>
         </div>
 
-        {/* Simple Unboxed Contact Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto mb-10 md:mb-14">
+        {/* Simple Compact Unboxed Contact Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 md:gap-3.5 max-w-3xl mx-auto mb-4 md:mb-5">
           {/* Email */}
-          <div className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group">
-            <div className="flex items-center gap-3.5 min-w-0">
-              <i className="fa-solid fa-envelope text-primary text-lg shrink-0"></i>
+          <div className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <i className="fa-solid fa-envelope text-primary text-sm shrink-0"></i>
               <div className="min-w-0 text-left">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Email</p>
-                <a href="mailto:thinkyuvraj@gmail.com" className="text-sm sm:text-base text-white font-semibold hover:text-primary transition-colors block truncate">
+                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Email</p>
+                <a href="mailto:thinkyuvraj@gmail.com" className="text-xs sm:text-sm text-white font-semibold hover:text-primary transition-colors block truncate">
                   thinkyuvraj@gmail.com
                 </a>
               </div>
             </div>
             <button
               onClick={() => handleCopy('thinkyuvraj@gmail.com', 'Email')}
-              className="text-xs text-primary font-bold hover:underline shrink-0 ml-2"
+              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
             >
               {copiedText === 'Email' ? 'Copied! ✓' : 'Copy'}
             </button>
           </div>
 
           {/* Phone */}
-          <div className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group">
-            <div className="flex items-center gap-3.5 min-w-0">
-              <i className="fa-solid fa-phone text-primary text-lg shrink-0"></i>
+          <div className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <i className="fa-solid fa-phone text-primary text-sm shrink-0"></i>
               <div className="min-w-0 text-left">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Phone</p>
-                <a href="tel:+919639677118" className="text-sm sm:text-base text-white font-semibold hover:text-primary transition-colors block truncate">
+                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Phone</p>
+                <a href="tel:+919639677118" className="text-xs sm:text-sm text-white font-semibold hover:text-primary transition-colors block truncate">
                   +91-9639677118
                 </a>
               </div>
             </div>
             <button
               onClick={() => handleCopy('+91-9639677118', 'Phone')}
-              className="text-xs text-primary font-bold hover:underline shrink-0 ml-2"
+              className="text-[10px] text-primary font-bold hover:underline shrink-0 ml-2"
             >
               {copiedText === 'Phone' ? 'Copied! ✓' : 'Copy'}
             </button>
@@ -97,20 +97,20 @@ function Contact() {
             href="https://linkedin.com/in/thinkyuvraj"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group"
+            className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group"
           >
-            <div className="flex items-center gap-3.5 min-w-0">
-              <i className="fa-brands fa-linkedin text-primary text-lg shrink-0"></i>
+            <div className="flex items-center gap-2.5 min-w-0">
+              <i className="fa-brands fa-linkedin text-primary text-sm shrink-0"></i>
               <div className="min-w-0 text-left">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn</p>
-                <span className="text-sm sm:text-base text-white font-semibold group-hover:text-primary transition-colors block truncate">
+                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn</p>
+                <span className="text-xs sm:text-sm text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   thinkyuvraj
                 </span>
               </div>
             </div>
-            <span className="text-xs text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
+            <span className="text-[10px] text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
-              <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
             </span>
           </a>
 
@@ -119,29 +119,29 @@ function Contact() {
             href="https://github.com/ThinkYuvraj"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group"
+            className="flex items-center justify-between py-1.5 px-2 border-b border-white/10 hover:border-primary/50 transition-colors group"
           >
-            <div className="flex items-center gap-3.5 min-w-0">
-              <i className="fa-brands fa-github text-primary text-lg shrink-0"></i>
+            <div className="flex items-center gap-2.5 min-w-0">
+              <i className="fa-brands fa-github text-primary text-sm shrink-0"></i>
               <div className="min-w-0 text-left">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">GitHub</p>
-                <span className="text-sm sm:text-base text-white font-semibold group-hover:text-primary transition-colors block truncate">
+                <p className="text-[8px] text-gray-400 font-bold uppercase tracking-widest">GitHub</p>
+                <span className="text-xs sm:text-sm text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   ThinkYuvraj
                 </span>
               </div>
             </div>
-            <span className="text-xs text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
+            <span className="text-[10px] text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
-              <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <i className="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
             </span>
           </a>
         </div>
 
         {/* Form Container */}
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-4 text-left">
-          <div className="grid md:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-2.5 text-left">
+          <div className="grid md:grid-cols-2 gap-2.5">
             <div>
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">
+              <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
                 Your Name
               </label>
               <input
@@ -150,11 +150,11 @@ function Contact() {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
               />
             </div>
             <div>
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">
+              <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
                 Your Email
               </label>
               <input
@@ -163,44 +163,44 @@ function Contact() {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
               />
             </div>
           </div>
           <div>
-            <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">
+            <label className="block text-[8px] font-bold uppercase tracking-widest text-gray-400 mb-0.5">
               Message
             </label>
             <textarea
               required
-              rows={4}
+              rows={2}
               placeholder="Hi Yuvraj, I'd like to discuss a software engineering opportunity..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
+              className="w-full px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
             ></textarea>
           </div>
 
-          <div className="text-center pt-2">
+          <div className="text-center pt-0.5">
             <button
               type="submit"
-              className="btn-shimmer px-10 py-4 bg-primary hover:bg-purple-600 text-black font-black uppercase text-xs tracking-widest rounded-xl transition-colors shadow-[0_10px_35px_rgba(168,85,247,0.4)] w-full sm:w-auto flex items-center justify-center gap-2 mx-auto"
+              className="btn-shimmer px-6 py-2 bg-primary hover:bg-purple-600 text-black font-black uppercase text-[10px] tracking-widest rounded-lg transition-colors shadow-[0_6px_20px_rgba(168,85,247,0.3)] w-full sm:w-auto flex items-center justify-center gap-1.5 mx-auto"
             >
               <span>{formSubmitted ? 'Message Prepared! Opening Mail App ✓' : 'Send Message'}</span>
-              <i className="fa-solid fa-paper-plane text-[10px]"></i>
+              <i className="fa-solid fa-paper-plane text-[8px]"></i>
             </button>
           </div>
         </form>
 
         {/* Footer Bar Links */}
-        <div className="flex flex-wrap justify-center gap-6 mt-10 md:mt-12 pt-8 border-t border-white/5">
+        <div className="flex flex-wrap justify-center gap-4 mt-4 md:mt-5 pt-3.5 border-t border-white/10">
           {socials.map((social, index) => (
             <a
               key={index}
               href={social.link}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 text-xs uppercase font-bold tracking-widest"
+              className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-widest"
             >
               <i className={social.icon}></i> {social.text}
             </a>
