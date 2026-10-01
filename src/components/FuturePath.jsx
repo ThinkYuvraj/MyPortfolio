@@ -79,10 +79,10 @@ function FuturePath() {
       <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 md:mb-12 gap-6">
         <div>
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="text-purple-300 text-[10px] font-bold uppercase tracking-[0.25em] bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-full">
+            <span className="text-purple-300 text-[10px] font-bold uppercase tracking-[0.25em] bg-purple-500/10 border border-purple-500/30 px-3 py-1 rounded-xl">
               CAREER TRAJECTORY & 2026 FOCUS
             </span>
-            <span className="text-emerald-300 text-[10px] font-bold bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+            <span className="text-emerald-300 text-[10px] font-bold bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-xl flex items-center gap-1.5 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Open for 2026 SDE Roles
             </span>
@@ -128,7 +128,7 @@ function FuturePath() {
               }`}
             >
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${track.badgeColor}`}>
+                <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-lg border ${track.badgeColor}`}>
                   {track.badge}
                 </span>
                 <i className={`fa-solid ${track.badgeIcon} text-xs text-purple-400`}></i>
@@ -155,7 +155,7 @@ function FuturePath() {
             {/* Track Header */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-[10px] text-primary font-bold uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-0.5 rounded-full">
+                <span className="text-[10px] text-primary font-bold uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-0.5 rounded-lg">
                   {currentTrack.badge}
                 </span>
                 <span className="text-gray-400 text-xs font-semibold">• Target Full-Time Track</span>

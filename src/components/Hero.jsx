@@ -50,8 +50,8 @@ function Hero() {
       <header className="min-h-[90vh] md:min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 pt-24 pb-12 sm:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
         {/* Transparent Fluid Hero Wrapper */}
         <div className="hero-container w-full relative px-1 sm:px-0">
-          {/* 1. Status Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-2.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 backdrop-blur-md mb-4 sm:mb-8 max-w-full shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+          {/* 1. Status Badge (Curved Rectangle) */}
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 backdrop-blur-md mb-4 sm:mb-8 max-w-full shadow-[0_0_15px_rgba(16,185,129,0.15)]">
             <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0 shadow-[0_0_8px_#34d399]"></span>
             <span className="text-emerald-300 text-[10px] sm:text-sm md:text-base font-semibold tracking-tight truncate">
               Open to Full-Time SDE & Engineering Roles (2026)
@@ -84,11 +84,11 @@ function Hero() {
             <span className="text-purple-300 font-semibold italic">Cloud Architecture</span>.
           </p>
 
-          {/* 5. Dynamic Cycling Glass Pill Badge */}
+          {/* 5. Dynamic Cycling Glass Curved-Corner Badge */}
           <div className="flex justify-center mb-5 sm:mb-12">
             <div
               onClick={() => setHighlightIndex((prev) => (prev + 1) % HIGHLIGHTS.length)}
-              className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-6 py-1.5 sm:py-3 rounded-full border border-primary/30 bg-white/[0.04] backdrop-blur-xl text-[11px] sm:text-sm md:text-base font-medium text-gray-200 hover:border-primary/60 transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 sm:px-6 py-2 sm:py-3 rounded-xl border border-primary/30 bg-white/[0.04] backdrop-blur-xl text-[11px] sm:text-sm md:text-base font-medium text-gray-200 hover:border-primary/60 transition-colors cursor-pointer group"
             >
               <i className={`${HIGHLIGHTS[highlightIndex].icon} ${HIGHLIGHTS[highlightIndex].color} text-xs sm:text-base shrink-0 transition-colors`}></i>
               <span className="transition-all duration-300 text-white font-semibold">
@@ -97,11 +97,11 @@ function Hero() {
             </div>
           </div>
 
-          {/* 6. CTA Pill Buttons */}
+          {/* 6. CTA Curved Rectangle Buttons */}
           <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-5 justify-center items-center w-full max-w-xs sm:max-w-none mx-auto">
             <a
               href="#experience"
-              className="btn-shimmer w-full sm:w-auto px-6 sm:px-12 py-2.5 sm:py-4.5 bg-primary hover:bg-purple-600 text-black font-black text-[11px] sm:text-sm md:text-base tracking-wide rounded-full transition-all flex items-center justify-center gap-2 sm:gap-2.5"
+              className="btn-shimmer w-full sm:w-auto px-6 sm:px-12 py-2.5 sm:py-4 bg-primary hover:bg-purple-600 text-black font-black text-[11px] sm:text-sm md:text-base tracking-wide rounded-xl transition-all flex items-center justify-center gap-2 sm:gap-2.5"
             >
               <i className="fa-solid fa-graduation-cap text-xs sm:text-sm"></i>
               <span>Career Roadmap</span>
@@ -110,7 +110,7 @@ function Hero() {
 
             <button
               onClick={() => setIsResumeModalOpen(true)}
-              className="w-full sm:w-auto px-6 sm:px-12 py-2.5 sm:py-4.5 bg-black/40 border border-purple-500/40 hover:border-purple-500/80 hover:bg-purple-500/10 text-white font-extrabold text-[11px] sm:text-sm md:text-base tracking-wide rounded-full transition-colors flex items-center justify-center gap-2 sm:gap-2.5"
+              className="w-full sm:w-auto px-6 sm:px-12 py-2.5 sm:py-4 bg-black/40 border border-purple-500/40 hover:border-purple-500/80 hover:bg-purple-500/10 text-white font-extrabold text-[11px] sm:text-sm md:text-base tracking-wide rounded-xl transition-colors flex items-center justify-center gap-2 sm:gap-2.5"
             >
               <i className="fa-solid fa-file-lines text-xs sm:text-sm text-purple-300"></i>
               <span>View Resume</span>
