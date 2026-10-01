@@ -22,6 +22,7 @@ function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-bold uppercase tracking-wider">
+            <a href="#" className="text-gray-300 hover:text-primary transition-colors">Home</a>
             <a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a>
             <a href="#skills" className="text-gray-300 hover:text-primary transition-colors">Skills</a>
             <a href="#projects" className="text-gray-300 hover:text-primary transition-colors">Projects</a>
@@ -62,6 +63,7 @@ function Navbar() {
           <i className="fa-solid fa-xmark"></i>
         </button>
         <div className="flex flex-col space-y-6 text-2xl font-black uppercase italic tracking-widest">
+          <a href="#" onClick={closeMenu} className="hover:text-primary">Home</a>
           <a href="#about" onClick={closeMenu} className="hover:text-primary">About</a>
           <a href="#skills" onClick={closeMenu} className="hover:text-primary">Skills</a>
           <a href="#projects" onClick={closeMenu} className="hover:text-primary">Projects</a>
