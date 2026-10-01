@@ -52,124 +52,88 @@ function Contact() {
           </p>
         </div>
 
-        {/* Contact Method Cards Grid (2 columns on md/lg screens for full spacious readability) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10 md:mb-12">
-          {/* Email Card */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group">
+        {/* Simple Unboxed Contact Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto mb-10 md:mb-14">
+          {/* Email */}
+          <div className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group">
             <div className="flex items-center gap-3.5 min-w-0">
-              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
-                <i className="fa-solid fa-envelope"></i>
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">Email</p>
-                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+              <i className="fa-solid fa-envelope text-primary text-lg shrink-0"></i>
+              <div className="min-w-0 text-left">
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Email</p>
+                <a href="mailto:thinkyuvraj@gmail.com" className="text-sm sm:text-base text-white font-semibold hover:text-primary transition-colors block truncate">
                   thinkyuvraj@gmail.com
-                </p>
+                </a>
               </div>
             </div>
             <button
               onClick={() => handleCopy('thinkyuvraj@gmail.com', 'Email')}
-              className={`px-3 py-1.5 rounded-lg border text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5 ${
-                copiedText === 'Email'
-                  ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
-                  : 'bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary'
-              }`}
+              className="text-xs text-primary font-bold hover:underline shrink-0 ml-2"
             >
-              {copiedText === 'Email' ? (
-                <>
-                  <i className="fa-solid fa-check text-[11px]"></i>
-                  <span>Copied</span>
-                </>
-              ) : (
-                <>
-                  <i className="fa-regular fa-copy text-[11px]"></i>
-                  <span>Copy</span>
-                </>
-              )}
+              {copiedText === 'Email' ? 'Copied! ✓' : 'Copy'}
             </button>
           </div>
 
-          {/* Phone Card */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group">
+          {/* Phone */}
+          <div className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group">
             <div className="flex items-center gap-3.5 min-w-0">
-              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
-                <i className="fa-solid fa-phone"></i>
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">Phone</p>
-                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+              <i className="fa-solid fa-phone text-primary text-lg shrink-0"></i>
+              <div className="min-w-0 text-left">
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Phone</p>
+                <a href="tel:+919639677118" className="text-sm sm:text-base text-white font-semibold hover:text-primary transition-colors block truncate">
                   +91-9639677118
-                </p>
+                </a>
               </div>
             </div>
             <button
               onClick={() => handleCopy('+91-9639677118', 'Phone')}
-              className={`px-3 py-1.5 rounded-lg border text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5 ${
-                copiedText === 'Phone'
-                  ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300'
-                  : 'bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary'
-              }`}
+              className="text-xs text-primary font-bold hover:underline shrink-0 ml-2"
             >
-              {copiedText === 'Phone' ? (
-                <>
-                  <i className="fa-solid fa-check text-[11px]"></i>
-                  <span>Copied</span>
-                </>
-              ) : (
-                <>
-                  <i className="fa-regular fa-copy text-[11px]"></i>
-                  <span>Copy</span>
-                </>
-              )}
+              {copiedText === 'Phone' ? 'Copied! ✓' : 'Copy'}
             </button>
           </div>
 
-          {/* LinkedIn Card */}
+          {/* LinkedIn */}
           <a
             href="https://linkedin.com/in/thinkyuvraj"
             target="_blank"
             rel="noreferrer"
-            className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group"
+            className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group"
           >
             <div className="flex items-center gap-3.5 min-w-0">
-              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
-                <i className="fa-brands fa-linkedin"></i>
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">LinkedIn</p>
-                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+              <i className="fa-brands fa-linkedin text-primary text-lg shrink-0"></i>
+              <div className="min-w-0 text-left">
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">LinkedIn</p>
+                <span className="text-sm sm:text-base text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   thinkyuvraj
-                </p>
+                </span>
               </div>
             </div>
-            <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-primary/30 group-hover:bg-primary/10 text-gray-300 group-hover:text-primary text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5">
+            <span className="text-xs text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
               <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </div>
+            </span>
           </a>
 
-          {/* GitHub Card */}
+          {/* GitHub */}
           <a
             href="https://github.com/ThinkYuvraj"
             target="_blank"
             rel="noreferrer"
-            className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-primary/40 transition-colors flex items-center justify-between group"
+            className="flex items-center justify-between p-3 border-b border-white/10 hover:border-primary/50 transition-colors group"
           >
             <div className="flex items-center gap-3.5 min-w-0">
-              <div className="w-11 h-11 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center text-lg shrink-0 group-hover:bg-primary group-hover:text-black transition-colors">
-                <i className="fa-brands fa-github"></i>
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] text-primary/70 font-bold uppercase tracking-widest">GitHub</p>
-                <p className="text-sm sm:text-base text-white font-semibold tracking-tight whitespace-nowrap overflow-x-auto scrollbar-none">
+              <i className="fa-brands fa-github text-primary text-lg shrink-0"></i>
+              <div className="min-w-0 text-left">
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">GitHub</p>
+                <span className="text-sm sm:text-base text-white font-semibold group-hover:text-primary transition-colors block truncate">
                   ThinkYuvraj
-                </p>
+                </span>
               </div>
             </div>
-            <div className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-primary/30 group-hover:bg-primary/10 text-gray-300 group-hover:text-primary text-xs font-semibold shrink-0 ml-3 transition-colors flex items-center gap-1.5">
+            <span className="text-xs text-primary font-bold flex items-center gap-1 shrink-0 ml-2">
               <span>Open</span>
               <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </div>
+            </span>
           </a>
         </div>
 
