@@ -1,5 +1,4 @@
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
 import { portfolioData } from '../data/portfolio';
 
 function About() {
@@ -16,30 +15,28 @@ function About() {
       <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Photo & Glass Card Column */}
         <div>
-          <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} glareEnable={true} glareMaxOpacity={0.15} glareColor="#a855f7" scale={1.02} transitionSpeed={2500}>
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="w-full aspect-square bg-card rounded-[2.5rem] md:rounded-[3rem] border-2 border-primary/30 overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative">
-                <img 
-                  src={about.photo} 
-                  alt="Yuvraj Singh"
-                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              </div>
+          <div className="relative max-w-md mx-auto lg:mx-0">
+            <div className="w-full aspect-square bg-card rounded-[2.5rem] md:rounded-[3rem] border-2 border-primary/30 overflow-hidden relative">
+              <img 
+                src={about.photo} 
+                alt="Yuvraj Singh"
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            </div>
 
-              {/* Floating Badge Overlay */}
-              <div className="absolute -bottom-6 -right-2 md:-bottom-6 md:-right-6 glass p-5 md:p-6 rounded-[1.8rem] border border-primary/40 shadow-2xl backdrop-blur-xl">
-                <p className="text-xl md:text-3xl font-black text-white italic tracking-tighter">Full-Stack <span className="text-primary font-normal">Web</span></p>
-                <p className="text-xs text-gray-300 font-semibold mt-0.5">Software Developer</p>
-                <div className="mt-2 flex gap-1.5 flex-wrap">
-                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">JS</span>
-                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">React</span>
-                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Node.js</span>
-                  <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Express</span>
-                </div>
+            {/* Floating Badge Overlay */}
+            <div className="absolute -bottom-6 -right-2 md:-bottom-6 md:-right-6 glass p-5 md:p-6 rounded-[1.8rem] border border-primary/40 backdrop-blur-xl">
+              <p className="text-xl md:text-3xl font-black text-white italic tracking-tighter">Full-Stack <span className="text-primary font-normal">Web</span></p>
+              <p className="text-xs text-gray-300 font-semibold mt-0.5">Software Developer</p>
+              <div className="mt-2 flex gap-1.5 flex-wrap">
+                <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">JS</span>
+                <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">React</span>
+                <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Node.js</span>
+                <span className="text-[9px] bg-primary/20 text-primary font-bold px-2 py-0.5 rounded-md border border-primary/30">Express</span>
               </div>
             </div>
-          </Tilt>
+          </div>
         </div>
 
         {/* Text Details Column */}
