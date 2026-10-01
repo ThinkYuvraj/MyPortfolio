@@ -59,7 +59,7 @@ function Hero() {
           </div>
 
           {/* 2. Main Name Title (2x Mobile Size, Single Line on Desktop) */}
-          <h1 className="text-[5rem] xs:text-[6.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8.5rem] 2xl:text-[9.5rem] font-black uppercase tracking-tight text-white italic leading-[0.88] mb-4 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-4 w-full sm:whitespace-nowrap">
+          <h1 className="text-[5rem] xs:text-[6.5rem] sm:text-[3.625rem] md:text-[4.375rem] lg:text-[5.875rem] xl:text-[8.375rem] 2xl:text-[9.375rem] font-black uppercase tracking-tight text-white italic leading-[0.88] mb-4 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-4 w-full sm:whitespace-nowrap">
             <span>{hero.title}</span>
             <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase">
               {hero.subtitle}
