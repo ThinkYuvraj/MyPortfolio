@@ -11,7 +11,7 @@ function About() {
   ];
 
   return (
-    <section id="about" className="max-w-6xl mx-auto py-20 md:py-32 px-6">
+    <section id="about" className="max-w-6xl mx-auto py-16 md:py-32 px-4 sm:px-6 overflow-hidden sm:overflow-visible">
       <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Photo & Glass Card Column */}
         <div>
@@ -26,7 +26,7 @@ function About() {
             </div>
 
             {/* Floating Badge Overlay */}
-            <div className="absolute -bottom-6 -right-2 md:-bottom-6 md:-right-6 glass p-5 md:p-6 rounded-[1.8rem] border border-primary/40 backdrop-blur-xl">
+            <div className="absolute -bottom-6 right-0 sm:-right-2 md:-right-6 glass p-4 sm:p-5 md:p-6 rounded-[1.8rem] border border-primary/40 backdrop-blur-xl max-w-[90%] sm:max-w-none">
               <p className="text-xl md:text-3xl font-black text-white italic tracking-tighter">Full-Stack <span className="text-primary font-normal">Web</span></p>
               <p className="text-xs text-gray-300 font-semibold mt-0.5">Software Developer</p>
               <div className="mt-2 flex gap-1.5 flex-wrap">

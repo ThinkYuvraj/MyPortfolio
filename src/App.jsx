@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   return (
-    <>
+    <div className="w-full max-w-full overflow-x-hidden relative min-h-screen">
       <CanvasBackground />
       <Navbar />
       <Hero />
@@ -29,7 +29,7 @@ function App() {
       <CareerPath />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 

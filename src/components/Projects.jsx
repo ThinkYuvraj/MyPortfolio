@@ -6,7 +6,7 @@ function Projects() {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="max-w-6xl mx-auto py-16 md:py-24 px-6">
+    <section id="projects" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6">
       <div className="mb-10 md:mb-14">
         <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em] bg-primary/10 border border-primary/20 px-3 py-1 rounded-full inline-block mb-3">
           Software & AI Innovations

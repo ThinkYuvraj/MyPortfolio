@@ -6,7 +6,7 @@ function CareerPath() {
   const { experience, education, publications, certifications } = portfolioData;
 
   return (
-    <section id="career-path" className="max-w-6xl mx-auto py-16 md:py-24 px-6">
+    <section id="career-path" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>

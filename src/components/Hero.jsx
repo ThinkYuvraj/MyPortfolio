@@ -47,7 +47,7 @@ function Hero() {
 
   return (
     <>
-      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 py-16 md:py-20 w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
+      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 py-16 md:py-20 w-full max-w-full sm:max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
         {/* Transparent Fluid Hero Wrapper */}
         <div className="hero-container w-full relative px-1 sm:px-0">
           {/* 1. Status Badge (Curved Rectangle) */}
@@ -58,8 +58,8 @@ function Hero() {
             </span>
           </div>
 
-          {/* 2. Main Name Title (2x Mobile Size, Single Line on Desktop) */}
-          <h1 className="text-[5rem] xs:text-[6.5rem] sm:text-[3.625rem] md:text-[4.375rem] lg:text-[5.875rem] xl:text-[8.375rem] 2xl:text-[9.375rem] font-black uppercase tracking-tight text-white italic leading-[0.88] mb-4 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-4 w-full sm:whitespace-nowrap">
+          {/* 2. Main Name Title (Prominent Stacked Mobile, Single Line on Desktop) */}
+          <h1 className="text-[3.75rem] min-[360px]:text-[4.35rem] min-[440px]:text-[5.25rem] sm:text-[3.625rem] md:text-[4.375rem] lg:text-[5.875rem] xl:text-[8.375rem] 2xl:text-[9.375rem] font-black uppercase tracking-tight text-white italic leading-[0.9] sm:leading-[0.88] mb-4 sm:mb-6 flex flex-col sm:flex-row justify-center items-center gap-0 sm:gap-4 w-full sm:whitespace-nowrap">
             <span>{hero.title}</span>
             <span className="bg-gradient-to-r from-primary via-fuchsia-400 to-indigo-400 bg-clip-text text-transparent not-italic uppercase">
               {hero.subtitle}
@@ -67,12 +67,12 @@ function Hero() {
           </h1>
 
           {/* 3. Role Sub-header with Fluid Gradient Lines */}
-          <div className="flex items-center justify-center gap-2.5 sm:gap-6 my-3 sm:my-6 w-full max-w-3xl mx-auto">
-            <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-purple-500/50"></span>
-            <span className="text-purple-300 font-extrabold text-[9px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase shrink-0 transition-all duration-500">
+          <div className="flex items-center justify-center gap-1.5 sm:gap-6 my-3 sm:my-6 w-full max-w-3xl mx-auto px-1">
+            <span className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-purple-500/50 min-w-[8px]"></span>
+            <span className="text-purple-300 font-extrabold text-[9px] sm:text-xs md:text-sm tracking-[0.08em] sm:tracking-[0.3em] uppercase transition-all duration-500 max-w-[80vw] sm:max-w-none truncate">
               {ROLES[roleIndex]}
             </span>
-            <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-purple-500/50"></span>
+            <span className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-purple-500/50 min-w-[8px]"></span>
           </div>
 
           {/* 4. Description Paragraph */}

@@ -97,7 +97,7 @@ function FuturePath() {
         </div>
 
         {/* Top Right Quick Navigation Pills */}
-        <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 shrink-0 self-start lg:self-auto">
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-1.5 p-1.5 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 max-w-full self-start lg:self-auto">
           <a href="#future-path" className="px-3.5 py-1.5 rounded-xl bg-primary text-black font-extrabold text-xs flex items-center gap-1.5 shadow-sm">
             <i className="fa-solid fa-crosshairs text-[11px]"></i>
             <span>Role Matcher</span>

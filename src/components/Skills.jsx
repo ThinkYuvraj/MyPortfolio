@@ -24,7 +24,7 @@ function Skills() {
   })).filter(category => category.items.length > 0);
 
   return (
-    <section id="skills" className="max-w-6xl mx-auto py-20 md:py-32 px-6">
+    <section id="skills" className="max-w-6xl mx-auto py-16 md:py-32 px-4 sm:px-6">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
         <div>
           <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em] bg-primary/10 border border-primary/20 px-3 py-1 rounded-full inline-block mb-3">

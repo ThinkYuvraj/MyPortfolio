@@ -11,9 +11,9 @@ function Navbar() {
   return (
     <>
       <nav className="fixed w-full z-50 top-0 px-3 sm:px-6 md:px-8 py-3 sm:py-5 pointer-events-none">
-        <div className="w-full max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-3xl px-6 sm:px-9 py-3.5 sm:py-4.5 pointer-events-auto shadow-2xl border border-primary/25 backdrop-blur-2xl">
+        <div className="w-full max-w-full sm:max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto flex justify-between items-center glass rounded-2xl md:rounded-3xl px-4 sm:px-9 py-3 sm:py-4.5 pointer-events-auto shadow-2xl border border-primary/25 backdrop-blur-2xl">
           <div className="flex items-center">
-            <a href="#" className="text-lg sm:text-xl md:text-2xl font-black tracking-tight uppercase italic shrink-0">
+            <a href="#" className="text-xl sm:text-2xl md:text-2xl font-black tracking-tight uppercase italic shrink-0">
               <span className="text-primary">YUVRAJ SINGH</span>
             </a>
             <span className="hidden xl:inline-block text-xs font-semibold text-gray-300 italic border-l border-white/15 pl-4 ml-4">
@@ -58,7 +58,7 @@ function Navbar() {
       </nav>
 
       {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl lg:hidden flex flex-col justify-center items-center text-center p-8 transition-transform duration-400 ease-[cubic-bezier(0.23,1,0.32,1)] ${menuActive ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl lg:hidden flex flex-col justify-center items-center text-center p-8 transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] ${menuActive ? 'translate-x-0 opacity-100 pointer-events-auto' : 'translate-x-full opacity-0 pointer-events-none invisible'}`}>
         <button onClick={closeMenu} className="absolute top-8 right-8 text-primary text-3xl">
           <i className="fa-solid fa-xmark"></i>
         </button>
