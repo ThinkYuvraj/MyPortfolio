@@ -5,7 +5,6 @@ import ResumeModal from './ResumeModal';
 
 const ROLES = [
   "FULL-STACK WEB DEVELOPER",
-  "SOFTWARE DEVELOPER INTERN @ MARKETINGLU",
   "MERN STACK ",
   "RESTFUL API & BACKEND ARCHITECT"
 ];
@@ -47,11 +46,11 @@ function Hero() {
 
   return (
     <>
-      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 py-16 md:py-20 w-full max-w-full sm:max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto">
+      <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 relative z-10 py-16 md:py-20 w-full max-w-full sm:max-w-[95vw] xl:max-w-7xl 2xl:max-w-[1600px] mx-auto mt-10 sm:mt-16">
         {/* Transparent Fluid Hero Wrapper */}
-        <div className="hero-container w-full relative px-1 sm:px-0">
+        <div className="hero-container  w-full relative px-1 sm:px-0">
           {/* 1. Status Badge (Curved Rectangle) */}
-          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 backdrop-blur-md mb-4 sm:mb-8 max-w-full shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+          <div className="inline-flex  items-center gap-2 px-3.5 sm:px-4.5 py-1.5 sm:py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 backdrop-blur-md mb-4 sm:mb-8 max-w-full shadow-[0_0_15px_rgba(16,185,129,0.15)]">
             <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0 shadow-[0_0_8px_#34d399]"></span>
             <span className="text-emerald-300 text-[10px] sm:text-sm md:text-base font-semibold tracking-tight truncate">
               Open to Full-Time SDE & Engineering Roles (2026)
